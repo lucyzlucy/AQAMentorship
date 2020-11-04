@@ -13,7 +13,6 @@ public class BaseTest {
         if (driver == null) {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver.exe");
             driver = new ChromeDriver();
-            driver.manage().window().maximize();
         }
     }
 
