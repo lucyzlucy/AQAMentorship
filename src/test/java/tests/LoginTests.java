@@ -40,24 +40,24 @@ public class LoginTests extends BaseTest {
     @Test
     public void verifyCannotSubmitEmptyFields() {
         SignInPage page = new SignInPage(driver)
-                .submitCredentials();
+                .submitEmptyCredentials();
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
         softAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        softAssert.assertTrue(page.getErrorMessage().contains(ERROR_INVALID_PASS), "The message about empty email is correct");
+        softAssert.assertTrue(page.compareErrorMessage(ERROR_EMPTY_EMAIL), "The message about empty email is correct");
         softAssert.assertAll();
     }
 
     @Test(dataProviderClass = TestDataProvider.class, dataProvider = "invalidEmails")
     public void verifyCannotLoginWithInvalidEmail(String invalidEmail) {
         SignInPage page = new SignInPage(driver)
-                .submitCredentials(invalidEmail, StringGeneratorUtils.getPassword());
+                .submitCredentials(invalidEmail, StringGeneratorUtils.getRandomPassword());
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
         softAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        softAssert.assertTrue(page.getErrorMessage().contains(ERROR_INVALID_EMAIL), "The message about invalid email is correct");
+        softAssert.assertTrue(page.compareErrorMessage(ERROR_INVALID_EMAIL), "The message about invalid email is correct");
         softAssert.assertAll();
 
     }
@@ -65,12 +65,12 @@ public class LoginTests extends BaseTest {
     @Test(dataProviderClass = TestDataProvider.class, dataProvider = "invalidPasswords")
     public void verifyCannotLoginWithInvalidPassword(String invalidPassword) {
         SignInPage page = new SignInPage(driver)
-                .submitCredentials(StringGeneratorUtils.getEmail(), invalidPassword);
+                .submitCredentials(StringGeneratorUtils.getRandomEmail(), invalidPassword);
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
         softAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        softAssert.assertTrue(page.getErrorMessage().contains(ERROR_INVALID_PASS), "The message about invalid password is correct");
+        softAssert.assertTrue(page.compareErrorMessage(ERROR_INVALID_PASS), "The message about invalid password is correct");
         softAssert.assertAll();
     }
 

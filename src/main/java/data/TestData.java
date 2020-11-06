@@ -12,5 +12,6 @@ public class TestData {
     public static final String ERROR_INVALID_PASS = "Invalid password.";
     public static final String ERROR_INVALID_EMAIL = "Invalid email address.";
     public static final String ERROR_EMPTY_EMAIL = "An email address required.";
+    public static final String ERROR_EXISTING_EMAIL = "An account using this email address has already been registered. Please enter a valid password or request a new one.";
 
 }

@@ -14,7 +14,13 @@ public class SignInPage extends BasePage {
     private WebElement passInput;
 
     @FindBy(id = "SubmitLogin")
-    private WebElement submitButton;
+    private WebElement submitSignInButton;
+
+    @FindBy(id = "email_create")
+    private WebElement emailRegisterInput;
+
+    @FindBy(id = "SubmitCreate")
+    private WebElement submitCreateButton;
 
     public SignInPage(WebDriver driver) {
         super(driver);
@@ -24,14 +30,30 @@ public class SignInPage extends BasePage {
     public SignInPage submitCredentials(String email, String password){
         emailInput.sendKeys(email);
         passInput.sendKeys(password);
-        submitButton.click();
+        submitSignInButton.click();
         return this;
     }
 
-    public SignInPage submitCredentials(){
-        submitButton.click();
+    public SignInPage submitEmptyCredentials(){
+        submitSignInButton.click();
         return this;
     }
 
+    public RegisterPage submitEmailForRegistration(String email){
+        emailRegisterInput.sendKeys(email);
+        submitCreateButton.click();
+        return new RegisterPage(driver);
+    }
+
+    public SignInPage submitEmptyEmailForRegistration(){
+        submitCreateButton.click();
+        return this;
+    }
+
+    public SignInPage submitExistingEmailForRegistration(String email){
+        emailRegisterInput.sendKeys(email);
+        submitCreateButton.click();
+        return this;
+    }
 
 }

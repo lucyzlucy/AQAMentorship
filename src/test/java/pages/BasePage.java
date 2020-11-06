@@ -1,14 +1,14 @@
 package pages;
 
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
+    protected static final int WAIT_ELEMENT_TIMEOUT = 5;
     protected WebDriver driver;
-
     @FindBy(className = "login")
     protected WebElement signinNavigationButton;
 
@@ -25,6 +25,10 @@ public class BasePage {
     public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+    }
+
+    public void waitForElementPresent(WebElement element) {
+        new WebDriverWait(driver, WAIT_ELEMENT_TIMEOUT).until(ExpectedConditions.visibilityOf(element));
     }
 
     public String getUrl() {
@@ -67,13 +71,21 @@ public class BasePage {
 
     public boolean errorBlockIsVisible() {
         try {
+            waitForElementPresent(alertBlock);
             return alertBlock.isDisplayed();
-        } catch (NoSuchElementException e) {
+        } catch (NoSuchElementException | TimeoutException e) {
             return false;
         }
     }
-    public String getErrorMessage() {
-            return alertBlock.getText();
+
+
+    public boolean compareErrorMessage(String errorMessage) {
+        try {
+            waitForElementPresent(alertBlock);
+            return alertBlock.getText().contains(errorMessage);
+        } catch (NoSuchElementException | TimeoutException e) {
+            return false;
+        }
     }
 }
 

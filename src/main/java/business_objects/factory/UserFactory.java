@@ -6,11 +6,21 @@ import utils.StringGeneratorUtils;
 
 import static data.TestData.PASSWORD;
 import static data.TestData.USERNAME;
-import static utils.StringGeneratorUtils.getPassword;
+import static utils.StringGeneratorUtils.getRandomPassword;
 
 public class UserFactory {
     public static User getNewUser() {
-        return new UserBuilder().setEmail(StringGeneratorUtils.getEmail()).setPassword(getPassword()).make();
+        return new UserBuilder().setEmail(StringGeneratorUtils.getRandomEmail())
+                .setPassword(getRandomPassword())
+                .setFirstName(StringGeneratorUtils.getRandomName())
+                .setLastName(StringGeneratorUtils.getRandomName())
+                .setAddress(StringGeneratorUtils.getRandomName())
+                .setCity(StringGeneratorUtils.getRandomName())
+                .setCountry("United States")
+                .setState("Alabama")
+                .setZip(StringGeneratorUtils.getRandomNumber())
+                .setPhone(StringGeneratorUtils.getRandomNumber())
+                .make();
     }
 
     public static User getExistingUser() {
