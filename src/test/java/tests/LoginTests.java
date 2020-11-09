@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.BasePage;
-import pages.HomePage;
+import pages.CataloguePage;
 import pages.SignInPage;
 import utils.StringGeneratorUtils;
 
@@ -17,7 +17,7 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void verifyCanNavigateToSignInPageFromMain() {
-        SignInPage page = new HomePage(driver)
+        SignInPage page = new CataloguePage(driver)
                 .navigateToSignInPage();
 
         Assert.assertTrue(page.getUrl().contains(SIGNIN_PAGE_URL));

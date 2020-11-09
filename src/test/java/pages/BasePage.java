@@ -6,8 +6,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 public class BasePage {
-    protected static final int WAIT_ELEMENT_TIMEOUT = 5;
+    protected static final int WAIT_ELEMENT_TIMEOUT = 10;
     protected WebDriver driver;
     @FindBy(className = "login")
     protected WebElement signinNavigationButton;
@@ -21,6 +23,9 @@ public class BasePage {
     @FindBy(className = "alert")
     protected WebElement alertBlock;
 
+    //    @FindBy(xpath = "//*[@title = \"Proceed to checkout\"]")
+    @FindBy(className = "cross")
+    protected WebElement closeButton;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -42,7 +47,13 @@ public class BasePage {
 
     public BasePage clickOnSignOut() {
         signOutNavigationButton.click();
-        return new BasePage(driver);
+        return this;
+    }
+
+    public BasePage closePopup() {
+        waitForElementPresent(closeButton);
+        closeButton.click();
+        return this;
     }
 
     public boolean signOutButtonIsVisible() {
@@ -86,6 +97,15 @@ public class BasePage {
         } catch (NoSuchElementException | TimeoutException e) {
             return false;
         }
+    }
+
+    protected WebElement getVisibleElement(List<WebElement> elements) {
+        for (WebElement element : elements) {
+            if (element.isDisplayed()) {
+                return element;
+            }
+        }
+        return null;
     }
 }
 
