@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4246cf7-c8d2-4438-87a5-6b6e4613685d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/business_objects/builders/ProductBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/business_objects/entities/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/Randomizer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/CartTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/TestData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CataloguePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/TestData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/TestData.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pages/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/BasePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/CartTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/CartTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/LoginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/LoginTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/RegisterTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/RegisterTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,60 +47,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="TestNG.CartTests.verifyDeletingProductsFromCart">
-    <configuration name="CartTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQAMentorshipEPAM" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CartTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CartTests.verifyCanAddRandomProductToCart" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQAMentorshipEPAM" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CartTests" />
-      <option name="METHOD_NAME" value="verifyCanAddRandomProductToCart" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CartTests.verifyConfirmationPopupIsShown" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQAMentorshipEPAM" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CartTests" />
-      <option name="METHOD_NAME" value="verifyConfirmationPopupIsShown" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.RegisterTests">
     <configuration name="CartTests.verifyDeletingProductsFromCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQAMentorshipEPAM" />
       <extension name="coverage">
@@ -147,13 +84,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQAMentorshipEPAM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.verifyCanLogout" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQAMentorshipEPAM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTests" />
+      <option name="METHOD_NAME" value="verifyCanLogout" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQAMentorshipEPAM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.RegisterTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RegisterTests" />
+        <item itemvalue="TestNG.LoginTests" />
+        <item itemvalue="TestNG.LoginTests.verifyCanLogout" />
         <item itemvalue="TestNG.CartTests.verifyDeletingProductsFromCart" />
         <item itemvalue="TestNG.CartTests.verifyProductDetailsInCart" />
-        <item itemvalue="TestNG.CartTests.verifyConfirmationPopupIsShown" />
-        <item itemvalue="TestNG.CartTests" />
-        <item itemvalue="TestNG.CartTests.verifyCanAddRandomProductToCart" />
       </list>
     </recent_temporary>
   </component>
@@ -200,28 +189,28 @@
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
     <state x="2605" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604568530284" />
-    <state width="1877" height="412" key="GridCell.Tab.0.bottom" timestamp="1604677166252">
+    <state width="1877" height="508" key="GridCell.Tab.0.bottom" timestamp="1604923101917">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="412" key="GridCell.Tab.0.bottom/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604677166252" />
+    <state width="1877" height="508" key="GridCell.Tab.0.bottom/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604923101917" />
     <state width="1877" height="378" key="GridCell.Tab.0.bottom/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604505909094" />
     <state width="1154" height="418" key="GridCell.Tab.0.bottom/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
-    <state width="1877" height="412" key="GridCell.Tab.0.center" timestamp="1604677166252">
+    <state width="1877" height="508" key="GridCell.Tab.0.center" timestamp="1604923101917">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="412" key="GridCell.Tab.0.center/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604677166252" />
+    <state width="1877" height="508" key="GridCell.Tab.0.center/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604923101917" />
     <state width="1877" height="378" key="GridCell.Tab.0.center/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604505909093" />
     <state width="1154" height="418" key="GridCell.Tab.0.center/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
-    <state width="1877" height="412" key="GridCell.Tab.0.left" timestamp="1604677166252">
+    <state width="1877" height="508" key="GridCell.Tab.0.left" timestamp="1604923101916">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="412" key="GridCell.Tab.0.left/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604677166252" />
+    <state width="1877" height="508" key="GridCell.Tab.0.left/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604923101916" />
     <state width="1877" height="378" key="GridCell.Tab.0.left/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604505909092" />
     <state width="1154" height="418" key="GridCell.Tab.0.left/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
-    <state width="1877" height="412" key="GridCell.Tab.0.right" timestamp="1604677166252">
+    <state width="1877" height="508" key="GridCell.Tab.0.right" timestamp="1604923101917">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="412" key="GridCell.Tab.0.right/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604677166252" />
+    <state width="1877" height="508" key="GridCell.Tab.0.right/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604923101917" />
     <state width="1877" height="378" key="GridCell.Tab.0.right/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604505909094" />
     <state width="1154" height="418" key="GridCell.Tab.0.right/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
     <state width="1877" height="412" key="GridCell.Tab.1.bottom" timestamp="1604677166253">

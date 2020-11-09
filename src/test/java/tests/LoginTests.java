@@ -83,9 +83,9 @@ public class LoginTests extends BaseTest {
                 .clickOnSignOut();
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
+        softAssert.assertTrue(page.getUrl().contains(SIGNIN_PAGE_URL), "The user stays on login page");
         softAssert.assertTrue(page.signInButtonIsVisible(), "The login link is shown");
-        softAssert.assertTrue(page.accountButtonIsVisible(), "No account link is shown");
+        softAssert.assertFalse(page.accountButtonIsVisible(), "No account link is shown");
         softAssert.assertAll();
     }
 }

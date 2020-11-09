@@ -57,33 +57,25 @@ public class BasePage {
     }
 
     public boolean signOutButtonIsVisible() {
-        try {
-            return signOutNavigationButton.isDisplayed();
-        } catch (NoSuchElementException e) {
-            return false;
-        }
+        return isVisible(signOutNavigationButton);
     }
 
     public boolean signInButtonIsVisible() {
-        try {
-            return signinNavigationButton.isDisplayed();
-        } catch (NoSuchElementException e) {
-            return false;
-        }
+        return isVisible(signinNavigationButton);
     }
 
     public boolean accountButtonIsVisible() {
-        try {
-            return accountNavigationButton.isDisplayed();
-        } catch (NoSuchElementException e) {
-            return false;
-        }
+        return isVisible(accountNavigationButton);
     }
 
     public boolean errorBlockIsVisible() {
+        return isVisible(alertBlock);
+    }
+
+    protected boolean isVisible(WebElement element) {
         try {
-            waitForElementPresent(alertBlock);
-            return alertBlock.isDisplayed();
+            waitForElementPresent(element);
+            return element.isDisplayed();
         } catch (NoSuchElementException | TimeoutException e) {
             return false;
         }
