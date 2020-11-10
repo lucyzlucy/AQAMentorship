@@ -1,5 +1,6 @@
 package pages;
 
+import driver.DriverWrapper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +20,7 @@ public class CartPage extends BasePage {
     protected WebElement nameInCart;
 
     public String getCartProductName() {
-        List<WebElement> list = driver.findElements(By.xpath("//p[@class=\"product-name\"]"));
+        List<WebElement> list = DriverWrapper.getDriver().findElements(By.xpath("//p[@class=\"product-name\"]"));
         waitForElementPresent(getVisibleElement(list));
         return getVisibleElement(list).getText();
     }

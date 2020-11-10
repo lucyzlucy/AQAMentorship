@@ -11,7 +11,6 @@ import java.util.List;
 
 public class BasePage {
     protected static final int WAIT_ELEMENT_TIMEOUT = 10;
-    protected WebDriver driver;
     @FindBy(className = "login")
     protected WebElement signinNavigationButton;
 
@@ -24,21 +23,19 @@ public class BasePage {
     @FindBy(className = "alert")
     protected WebElement alertBlock;
 
-    //    @FindBy(xpath = "//*[@title = \"Proceed to checkout\"]")
     @FindBy(className = "cross")
     protected WebElement closeButton;
 
     public BasePage() {
-        this.driver = DriverWrapper.getDriver();
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(DriverWrapper.getDriver(), this);
     }
 
     public void waitForElementPresent(WebElement element) {
-        new WebDriverWait(driver, WAIT_ELEMENT_TIMEOUT).until(ExpectedConditions.visibilityOf(element));
+        new WebDriverWait(DriverWrapper.getDriver(), WAIT_ELEMENT_TIMEOUT).until(ExpectedConditions.visibilityOf(element));
     }
 
     public String getUrl() {
-        return driver.getCurrentUrl();
+        return DriverWrapper.getDriver().getCurrentUrl();
     }
 
     public SignInPage navigateToSignInPage() {

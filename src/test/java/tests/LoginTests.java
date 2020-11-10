@@ -12,6 +12,7 @@ import pages.SignInPage;
 import utils.StringGeneratorUtils;
 
 import static data.TestData.*;
+import static environment.Environment.getEnvProperty;
 
 public class LoginTests extends BaseTest {
 
@@ -45,7 +46,7 @@ public class LoginTests extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
         softAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        softAssert.assertTrue(page.compareErrorMessage(ERROR_EMPTY_EMAIL), "The message about empty email is correct");
+        softAssert.assertTrue(page.compareErrorMessage(getEnvProperty("errorEmptyEmail")), "The message about empty email is correct");
         softAssert.assertAll();
     }
 
@@ -57,7 +58,7 @@ public class LoginTests extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
         softAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        softAssert.assertTrue(page.compareErrorMessage(ERROR_INVALID_EMAIL), "The message about invalid email is correct");
+        softAssert.assertTrue(page.compareErrorMessage(getEnvProperty("errorInvalidEmail")), "The message about invalid email is correct");
         softAssert.assertAll();
 
     }
@@ -70,7 +71,7 @@ public class LoginTests extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
         softAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        softAssert.assertTrue(page.compareErrorMessage(ERROR_INVALID_PASS), "The message about invalid password is correct");
+        softAssert.assertTrue(page.compareErrorMessage(getEnvProperty("errorInvalidPass")), "The message about invalid password is correct");
         softAssert.assertAll();
     }
 

@@ -1,31 +1,25 @@
 package environment;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Properties;
+import org.apache.commons.configuration.ConfigurationException;
+import org.apache.commons.configuration.PropertiesConfiguration;
 
 public class Environment {
-    static final String environmentPath = "src/test/resources/environment.properties";
-    private Properties applicationProps;
-    static Environment environment;
+    static PropertiesConfiguration applicationProps;
+    private final String environmentPath = "src/test/resources/environment.properties";
 
-    private Environment(){
-        applicationProps = new Properties();
-        FileInputStream in;
+    private Environment() {
         try {
-            in = new FileInputStream(new File(environmentPath));
-            applicationProps.load(in);
-            in.close();
-        } catch (IOException e) {
+            applicationProps = new PropertiesConfiguration(environmentPath);
+        } catch (ConfigurationException e) {
             e.printStackTrace();
         }
+
     }
 
-    public static String getProperty(String key) {
-        if (environment == null) {
-            environment = new Environment();
+    public static String getEnvProperty(String key) {
+        if (applicationProps == null) {
+            new Environment();
         }
-        return environment.applicationProps.getProperty(key);
+        return applicationProps.getProperty(key).toString();
     }
 }

@@ -2,6 +2,7 @@ package pages;
 
 import business_objects.builders.ProductBuilder;
 import business_objects.entities.Product;
+import driver.DriverWrapper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,7 +38,7 @@ public class CataloguePage extends BasePage {
     protected WebElement cartButton;
 
     public CataloguePage() {
-        driver.get(CATALOGUE_PAGE_URL);
+        DriverWrapper.getDriver().get(CATALOGUE_PAGE_URL);
     }
 
     public CataloguePage clickOnRandomCatalogueSection() {

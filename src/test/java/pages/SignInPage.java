@@ -1,5 +1,6 @@
 package pages;
 
+import driver.DriverWrapper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,33 +24,33 @@ public class SignInPage extends BasePage {
     private WebElement submitCreateButton;
 
     public SignInPage() {
-        driver.get(SIGNIN_PAGE_URL);
+        DriverWrapper.getDriver().get(SIGNIN_PAGE_URL);
     }
 
-    public SignInPage submitCredentials(String email, String password){
+    public SignInPage submitCredentials(String email, String password) {
         emailInput.sendKeys(email);
         passInput.sendKeys(password);
         submitSignInButton.click();
         return this;
     }
 
-    public SignInPage submitEmptyCredentials(){
+    public SignInPage submitEmptyCredentials() {
         submitSignInButton.click();
         return this;
     }
 
-    public RegisterPage submitEmailForRegistration(String email){
+    public RegisterPage submitEmailForRegistration(String email) {
         emailRegisterInput.sendKeys(email);
         submitCreateButton.click();
         return new RegisterPage();
     }
 
-    public SignInPage submitEmptyEmailForRegistration(){
+    public SignInPage submitEmptyEmailForRegistration() {
         submitCreateButton.click();
         return this;
     }
 
-    public SignInPage submitExistingEmailForRegistration(String email){
+    public SignInPage submitExistingEmailForRegistration(String email) {
         emailRegisterInput.sendKeys(email);
         submitCreateButton.click();
         return this;

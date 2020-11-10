@@ -9,6 +9,7 @@ import pages.RegisterPage;
 import pages.SignInPage;
 
 import static data.TestData.*;
+import static environment.Environment.getEnvProperty;
 
 public class RegisterTests extends BaseTest {
 
@@ -31,7 +32,7 @@ public class RegisterTests extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
         softAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        softAssert.assertTrue(page.compareErrorMessage(ERROR_INVALID_EMAIL), "The message about empty email is correct");
+        softAssert.assertTrue(page.compareErrorMessage(getEnvProperty("errorInvalidEmail")), "The message about empty email is correct");
         softAssert.assertAll();
     }
 
@@ -45,7 +46,7 @@ public class RegisterTests extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
         softAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        softAssert.assertTrue(page.compareErrorMessage(ERROR_EXISTING_EMAIL), "The message about empty email is correct");
+        softAssert.assertTrue(page.compareErrorMessage(getEnvProperty("errorExistingEmail")), "The message about empty email is correct");
         softAssert.assertAll();
     }
 
