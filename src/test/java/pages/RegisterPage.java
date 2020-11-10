@@ -39,8 +39,8 @@ public class RegisterPage extends BasePage {
     @FindBy(id = "submitAccount")
     private WebElement registerButton;
 
-    public RegisterPage(WebDriver driver) {
-        super(driver);
+    public RegisterPage() {
+
     }
 
     public RegisterPage submitValidRegistrationInfo(User user) {

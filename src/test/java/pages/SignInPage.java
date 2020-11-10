@@ -22,8 +22,7 @@ public class SignInPage extends BasePage {
     @FindBy(id = "SubmitCreate")
     private WebElement submitCreateButton;
 
-    public SignInPage(WebDriver driver) {
-        super(driver);
+    public SignInPage() {
         driver.get(SIGNIN_PAGE_URL);
     }
 
@@ -42,7 +41,7 @@ public class SignInPage extends BasePage {
     public RegisterPage submitEmailForRegistration(String email){
         emailRegisterInput.sendKeys(email);
         submitCreateButton.click();
-        return new RegisterPage(driver);
+        return new RegisterPage();
     }
 
     public SignInPage submitEmptyEmailForRegistration(){

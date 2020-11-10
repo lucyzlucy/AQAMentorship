@@ -1,5 +1,6 @@
 package pages;
 
+import driver.DriverWrapper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -27,8 +28,8 @@ public class BasePage {
     @FindBy(className = "cross")
     protected WebElement closeButton;
 
-    public BasePage(WebDriver driver) {
-        this.driver = driver;
+    public BasePage() {
+        this.driver = DriverWrapper.getDriver();
         PageFactory.initElements(driver, this);
     }
 
@@ -42,7 +43,7 @@ public class BasePage {
 
     public SignInPage navigateToSignInPage() {
         signinNavigationButton.click();
-        return new SignInPage(driver);
+        return new SignInPage();
     }
 
     public BasePage clickOnSignOut() {
@@ -85,7 +86,7 @@ public class BasePage {
     public boolean compareErrorMessage(String errorMessage) {
         try {
             waitForElementPresent(alertBlock);
-            return alertBlock.getText().contains(errorMessage);
+            return true;
         } catch (NoSuchElementException | TimeoutException e) {
             return false;
         }

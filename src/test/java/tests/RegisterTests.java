@@ -16,7 +16,7 @@ public class RegisterTests extends BaseTest {
     public void verifyCanRegister() {
         User user = UserFactory.getNewUser();
 
-        RegisterPage page = new SignInPage(driver)
+        RegisterPage page = new SignInPage()
                 .submitEmailForRegistration(user.getEmail())
                 .submitValidRegistrationInfo(user);
 
@@ -25,7 +25,7 @@ public class RegisterTests extends BaseTest {
 
     @Test
     public void verifyCannotRegisterWithEmptyEmail() {
-        SignInPage page = new SignInPage(driver)
+        SignInPage page = new SignInPage()
                 .submitEmptyEmailForRegistration();
 
         SoftAssert softAssert = new SoftAssert();
@@ -39,7 +39,7 @@ public class RegisterTests extends BaseTest {
     public void verifyCannotRegisterWithExistingEmail() {
         User user = UserFactory.getExistingUser();
 
-        SignInPage page = new SignInPage(driver)
+        SignInPage page = new SignInPage()
                 .submitExistingEmailForRegistration(user.getEmail());
 
         SoftAssert softAssert = new SoftAssert();
@@ -53,7 +53,7 @@ public class RegisterTests extends BaseTest {
     public void verifyCannotRegisterWithEmptyInfo() {
         User user = UserFactory.getNewUser();
 
-        RegisterPage page = new SignInPage(driver)
+        RegisterPage page = new SignInPage()
                 .submitEmailForRegistration(user.getEmail())
                 .submitEmptyRegistrationInfo();
 

@@ -18,10 +18,6 @@ public class CartPage extends BasePage {
     @FindBy(xpath = "//p[@class=\"product-name\"][0]")
     protected WebElement nameInCart;
 
-    public CartPage(WebDriver driver) {
-        super(driver);
-    }
-
     public String getCartProductName() {
         List<WebElement> list = driver.findElements(By.xpath("//p[@class=\"product-name\"]"));
         waitForElementPresent(getVisibleElement(list));

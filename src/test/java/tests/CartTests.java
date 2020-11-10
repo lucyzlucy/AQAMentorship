@@ -17,7 +17,7 @@ public class CartTests extends BaseTest {
 
     @BeforeMethod
     public void addProductToCart() {
-        page = new CataloguePage(driver);
+        page = new CataloguePage();
         product = page.clickOnRandomCatalogueSection().chooseRandomProduct();
         page.addProductToCart(product);
     }

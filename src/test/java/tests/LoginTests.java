@@ -17,7 +17,7 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void verifyCanNavigateToSignInPageFromMain() {
-        SignInPage page = new CataloguePage(driver)
+        SignInPage page = new CataloguePage()
                 .navigateToSignInPage();
 
         Assert.assertTrue(page.getUrl().contains(SIGNIN_PAGE_URL));
@@ -27,7 +27,7 @@ public class LoginTests extends BaseTest {
     public void verifyCanSignInWithValidCredentials() {
         User user = UserFactory.getExistingUser();
 
-        SignInPage page = new SignInPage(driver)
+        SignInPage page = new SignInPage()
                 .submitCredentials(user.getEmail(), user.getPassword());
 
         SoftAssert softAssert = new SoftAssert();
@@ -39,7 +39,7 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void verifyCannotSubmitEmptyFields() {
-        SignInPage page = new SignInPage(driver)
+        SignInPage page = new SignInPage()
                 .submitEmptyCredentials();
 
         SoftAssert softAssert = new SoftAssert();
@@ -51,7 +51,7 @@ public class LoginTests extends BaseTest {
 
     @Test(dataProviderClass = TestDataProvider.class, dataProvider = "invalidEmails")
     public void verifyCannotLoginWithInvalidEmail(String invalidEmail) {
-        SignInPage page = new SignInPage(driver)
+        SignInPage page = new SignInPage()
                 .submitCredentials(invalidEmail, StringGeneratorUtils.getRandomPassword());
 
         SoftAssert softAssert = new SoftAssert();
@@ -64,7 +64,7 @@ public class LoginTests extends BaseTest {
 
     @Test(dataProviderClass = TestDataProvider.class, dataProvider = "invalidPasswords")
     public void verifyCannotLoginWithInvalidPassword(String invalidPassword) {
-        SignInPage page = new SignInPage(driver)
+        SignInPage page = new SignInPage()
                 .submitCredentials(StringGeneratorUtils.getRandomEmail(), invalidPassword);
 
         SoftAssert softAssert = new SoftAssert();
@@ -78,7 +78,7 @@ public class LoginTests extends BaseTest {
     public void verifyCanLogout() {
         User user = UserFactory.getExistingUser();
 
-        BasePage page = new SignInPage(driver)
+        BasePage page = new SignInPage()
                 .submitCredentials(user.getEmail(), user.getPassword())
                 .clickOnSignOut();
 

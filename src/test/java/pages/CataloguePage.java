@@ -36,8 +36,7 @@ public class CataloguePage extends BasePage {
     @FindBy(xpath = "//div[@class='shopping_cart']/a")
     protected WebElement cartButton;
 
-    public CataloguePage(WebDriver driver) {
-        super(driver);
+    public CataloguePage() {
         driver.get(CATALOGUE_PAGE_URL);
     }
 
@@ -84,7 +83,7 @@ public class CataloguePage extends BasePage {
 
     public CartPage clickOnCart() {
         cartButton.click();
-        return new CartPage(driver);
+        return new CartPage();
     }
 
 
