@@ -10,7 +10,8 @@ public class DriverWrapper {
     private static WebDriver driver;
 
     private DriverWrapper() {
-        String type = Environment.getProperty("browser");
+        String type = Environment.getEnvProperty("browser");
+
         switch (type) {
             case "Chrome":
                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver.exe");
@@ -37,6 +38,10 @@ public class DriverWrapper {
     public static void killDriverInstance() {
         driver.close();
         driver = null;
+    }
+
+    public static void clearBrowserCookies() {
+        driver.manage().deleteAllCookies();
     }
 
 }
