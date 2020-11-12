@@ -22,4 +22,16 @@ public class Environment {
         }
         return applicationProps.getProperty(key).toString();
     }
+
+    public static void setEnvProperty(String key, String value) {
+        if (applicationProps == null) {
+            new Environment();
+        }
+        applicationProps.setProperty(key, value);
+        try {
+            applicationProps.save();
+        } catch (ConfigurationException e) {
+            e.printStackTrace();
+        }
+    }
 }
