@@ -1,4 +1,7 @@
 package pages;
 
-public class EmptyCartPage {
+public class EmptyCartPage extends CartPage{
+    public EmptyCartPage() {
+        waitForPageToLoad(alertBlock);
+    }
 }

@@ -1,7 +1,6 @@
 package pages;
 
 import driver.DriverWrapper;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -25,6 +24,7 @@ public class SignInPage extends BasePage {
 
     public SignInPage() {
         DriverWrapper.getDriver().get(SIGNIN_PAGE_URL);
+        waitForPageToLoad(submitSignInButton);
     }
 
     public SignInPage submitCredentials(String email, String password) {

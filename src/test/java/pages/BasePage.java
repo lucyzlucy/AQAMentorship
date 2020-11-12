@@ -4,13 +4,12 @@ import driver.DriverWrapper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
+import static driver.DriverWrapper.isElementLoaded;
+
 public class BasePage {
-    protected static final int WAIT_ELEMENT_TIMEOUT = 10;
     @FindBy(className = "login")
     protected WebElement signinNavigationButton;
 
@@ -30,8 +29,8 @@ public class BasePage {
         PageFactory.initElements(DriverWrapper.getDriver(), this);
     }
 
-    public void waitForElementPresent(WebElement element) {
-        new WebDriverWait(DriverWrapper.getDriver(), WAIT_ELEMENT_TIMEOUT).until(ExpectedConditions.visibilityOf(element));
+    protected void waitForPageToLoad(WebElement keyElement) {
+        DriverWrapper.isElementLoaded(keyElement);
     }
 
     public String getUrl() {
@@ -49,44 +48,18 @@ public class BasePage {
     }
 
     public BasePage closePopup() {
-        waitForElementPresent(closeButton);
+        isElementLoaded(closeButton);
         closeButton.click();
         return this;
     }
 
-    public boolean signOutButtonIsVisible() {
-        return isVisible(signOutNavigationButton);
-    }
-
-    public boolean signInButtonIsVisible() {
-        return isVisible(signinNavigationButton);
-    }
-
-    public boolean accountButtonIsVisible() {
-        return isVisible(accountNavigationButton);
-    }
-
     public boolean errorBlockIsVisible() {
-        return isVisible(alertBlock);
+        return isElementLoaded(alertBlock);
     }
 
-    protected boolean isVisible(WebElement element) {
-        try {
-            waitForElementPresent(element);
-            return element.isDisplayed();
-        } catch (NoSuchElementException | TimeoutException e) {
-            return false;
-        }
-    }
-
-
-    public boolean compareErrorMessage(String errorMessage) {
-        try {
-            waitForElementPresent(alertBlock);
-            return true;
-        } catch (NoSuchElementException | TimeoutException e) {
-            return false;
-        }
+    public String getErrorMessage() {
+            return alertBlock.getText();
+//        }
     }
 
     protected WebElement getVisibleElement(List<WebElement> elements) {
@@ -97,5 +70,14 @@ public class BasePage {
         }
         return null;
     }
+
+    public boolean loggedUserHeaderIsShown() {
+        return isElementLoaded(accountNavigationButton) & isElementLoaded(signOutNavigationButton);
+    }
+
+    public boolean unloggedUserHeaderIsShown() {
+        return isElementLoaded(signinNavigationButton);
+    }
+
 }
 

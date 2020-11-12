@@ -2,10 +2,10 @@ package business_objects.factory;
 
 import business_objects.builders.UserBuilder;
 import business_objects.entities.User;
+import environment.Environment;
 import utils.StringGeneratorUtils;
 
-import static data.TestData.PASSWORD;
-import static data.TestData.USERNAME;
+import static data.CryptedPass.getDecodedPass;
 import static utils.StringGeneratorUtils.getRandomPassword;
 
 public class UserFactory {
@@ -24,6 +24,6 @@ public class UserFactory {
     }
 
     public static User getExistingUser() {
-        return new UserBuilder().setEmail(USERNAME).setPassword(PASSWORD).make();
+        return new UserBuilder().setEmail(Environment.getEnvProperty("user.email")).setPassword(getDecodedPass()).make();
     }
 }

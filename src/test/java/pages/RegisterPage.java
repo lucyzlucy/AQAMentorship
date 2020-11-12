@@ -1,15 +1,9 @@
 package pages;
 
 import business_objects.entities.User;
-import driver.DriverWrapper;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static data.TestData.SIGNIN_PAGE_URL;
 
 public class RegisterPage extends BasePage {
     @FindBy(id = "customer_firstname")
@@ -42,8 +36,11 @@ public class RegisterPage extends BasePage {
     @FindBy(id = "submitAccount")
     private WebElement registerButton;
 
+    public RegisterPage(){
+        waitForPageToLoad(registerButton);
+    }
+
     public RegisterPage submitValidRegistrationInfo(User user) {
-        waitForElementPresent(firstNameInput);
 
         firstNameInput.sendKeys(user.getFirstName());
         lastNameInput.sendKeys(user.getLastName());
@@ -59,7 +56,6 @@ public class RegisterPage extends BasePage {
     }
 
     public RegisterPage submitEmptyRegistrationInfo() {
-        waitForElementPresent(firstNameInput);
 
         registerButton.click();
         return this;

@@ -4,14 +4,13 @@ import business_objects.builders.ProductBuilder;
 import business_objects.entities.Product;
 import driver.DriverWrapper;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.locators.RelativeLocator;
 
 import java.util.List;
 
 import static data.TestData.CATALOGUE_PAGE_URL;
+import static driver.DriverWrapper.isElementLoaded;
 import static utils.Randomizer.getRandomIntWithinSize;
 
 public class CataloguePage extends BasePage {
@@ -39,17 +38,16 @@ public class CataloguePage extends BasePage {
 
     public CataloguePage() {
         DriverWrapper.getDriver().get(CATALOGUE_PAGE_URL);
+        waitForPageToLoad(productList);
     }
 
     public CataloguePage clickOnRandomCatalogueSection() {
-        waitForElementPresent(catalogueMenu);
         List<WebElement> children = catalogueMenu.findElements(By.xpath("./li"));
         children.get(getRandomIntWithinSize(children.size())).click();
         return this;
     }
 
     public Product chooseRandomProduct() {
-        waitForElementPresent(productList);
 
         List<WebElement> children = productList.findElements(By.xpath("./li"));
         WebElement productElement = children.get(getRandomIntWithinSize(children.size()));
@@ -66,7 +64,7 @@ public class CataloguePage extends BasePage {
     }
 
     public String getMessage() {
-        waitForElementPresent(successMessage);
+        isElementLoaded(successMessage);
         return successMessage.getText();
     }
 
@@ -82,9 +80,9 @@ public class CataloguePage extends BasePage {
         return Integer.parseInt(productName.getText());
     }
 
-    public CartPage clickOnCart() {
+    public FullCartPage clickOnCart() {
         cartButton.click();
-        return new CartPage();
+        return new FullCartPage();
     }
 
 

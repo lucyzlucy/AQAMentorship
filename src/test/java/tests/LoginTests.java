@@ -5,10 +5,10 @@ import business_objects.factory.UserFactory;
 import dataProvider.TestDataProvider;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 import pages.BasePage;
 import pages.CataloguePage;
 import pages.SignInPage;
+import utils.CustomAssert;
 import utils.StringGeneratorUtils;
 
 import static data.TestData.*;
@@ -21,7 +21,9 @@ public class LoginTests extends BaseTest {
         SignInPage page = new CataloguePage()
                 .navigateToSignInPage();
 
-        Assert.assertTrue(page.getUrl().contains(SIGNIN_PAGE_URL));
+        CustomAssert custAssert = new CustomAssert();
+        custAssert.assertTrue(page.getUrl().contains(SIGNIN_PAGE_URL), "SIGNIN_PAGE_URL is opened");
+        custAssert.assertAll();
     }
 
     @Test
@@ -31,11 +33,10 @@ public class LoginTests extends BaseTest {
         SignInPage page = new SignInPage()
                 .submitCredentials(user.getEmail(), user.getPassword());
 
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(page.getUrl(), MY_ACCOUNT_PAGE, "The user is redirected to account page");
-        softAssert.assertTrue(page.signOutButtonIsVisible(), "The logout link is shown");
-        softAssert.assertTrue(page.accountButtonIsVisible(), "The account link is shown");
-        softAssert.assertAll();
+        CustomAssert custAssert = new CustomAssert();
+        custAssert.assertEquals(page.getUrl(), MY_ACCOUNT_PAGE, "The user is redirected to account page");
+        custAssert.assertTrue(page.loggedUserHeaderIsShown(), "Account and signout buttons are shown");
+        custAssert.assertAll();
     }
 
     @Test
@@ -43,24 +44,25 @@ public class LoginTests extends BaseTest {
         SignInPage page = new SignInPage()
                 .submitEmptyCredentials();
 
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
-        softAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        softAssert.assertTrue(page.compareErrorMessage(getEnvProperty("errorEmptyEmail")), "The message about empty email is correct");
-        softAssert.assertAll();
-    }
+        CustomAssert customAssert = new CustomAssert();
+        customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
+        customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown");
+        customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
+        customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorEmptyEmail")), "The message about empty email is correct");
+        customAssert.assertAll();
+     }
 
     @Test(dataProviderClass = TestDataProvider.class, dataProvider = "invalidEmails")
     public void verifyCannotLoginWithInvalidEmail(String invalidEmail) {
         SignInPage page = new SignInPage()
                 .submitCredentials(invalidEmail, StringGeneratorUtils.getRandomPassword());
 
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
-        softAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        softAssert.assertTrue(page.compareErrorMessage(getEnvProperty("errorInvalidEmail")), "The message about invalid email is correct");
-        softAssert.assertAll();
-
+        CustomAssert customAssert = new CustomAssert();
+        customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
+        customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown");
+        customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
+        customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorInvalidEmail")), "The message about invalid email is correct");
+        customAssert.assertAll();
     }
 
     @Test(dataProviderClass = TestDataProvider.class, dataProvider = "invalidPasswords")
@@ -68,11 +70,12 @@ public class LoginTests extends BaseTest {
         SignInPage page = new SignInPage()
                 .submitCredentials(StringGeneratorUtils.getRandomEmail(), invalidPassword);
 
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
-        softAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        softAssert.assertTrue(page.compareErrorMessage(getEnvProperty("errorInvalidPass")), "The message about invalid password is correct");
-        softAssert.assertAll();
+        CustomAssert customAssert = new CustomAssert();
+        customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
+        customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown");
+        customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
+        customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorInvalidPass")), "The message about invalid password is correct");
+        customAssert.assertAll();
     }
 
     @Test
@@ -83,10 +86,7 @@ public class LoginTests extends BaseTest {
                 .submitCredentials(user.getEmail(), user.getPassword())
                 .clickOnSignOut();
 
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(page.getUrl().contains(SIGNIN_PAGE_URL), "The user stays on login page");
-        softAssert.assertTrue(page.signInButtonIsVisible(), "The login link is shown");
-        softAssert.assertFalse(page.accountButtonIsVisible(), "No account link is shown");
-        softAssert.assertAll();
+        Assert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown");
+
     }
 }

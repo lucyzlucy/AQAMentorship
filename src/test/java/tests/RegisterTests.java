@@ -4,9 +4,9 @@ import business_objects.entities.User;
 import business_objects.factory.UserFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 import pages.RegisterPage;
 import pages.SignInPage;
+import utils.CustomAssert;
 
 import static data.TestData.*;
 import static environment.Environment.getEnvProperty;
@@ -21,7 +21,10 @@ public class RegisterTests extends BaseTest {
                 .submitEmailForRegistration(user.getEmail())
                 .submitValidRegistrationInfo(user);
 
-        Assert.assertTrue(page.getUrl().contains(MY_ACCOUNT_PAGE));
+        CustomAssert customAssert = new CustomAssert();
+        customAssert.assertTrue(page.getUrl().contains(MY_ACCOUNT_PAGE));
+        customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "Account and signout buttons are shown - the user is logged");
+        customAssert.assertAll();
     }
 
     @Test
@@ -29,11 +32,13 @@ public class RegisterTests extends BaseTest {
         SignInPage page = new SignInPage()
                 .submitEmptyEmailForRegistration();
 
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
-        softAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        softAssert.assertTrue(page.compareErrorMessage(getEnvProperty("errorInvalidEmail")), "The message about empty email is correct");
-        softAssert.assertAll();
+        CustomAssert customAssert = new CustomAssert();
+        customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
+        customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown - the user is unlogged");
+        customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
+        customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorInvalidEmail")), "The message about empty email is correct");
+        customAssert.assertAll();
+
     }
 
     @Test
@@ -43,11 +48,12 @@ public class RegisterTests extends BaseTest {
         SignInPage page = new SignInPage()
                 .submitExistingEmailForRegistration(user.getEmail());
 
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
-        softAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        softAssert.assertTrue(page.compareErrorMessage(getEnvProperty("errorExistingEmail")), "The message about empty email is correct");
-        softAssert.assertAll();
+        CustomAssert customAssert = new CustomAssert();
+        customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
+        customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown - the user is unlogged");
+        customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
+        customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorExistingEmail")), "The message about empty email is correct");
+        customAssert.assertAll();
     }
 
     @Test
@@ -58,9 +64,11 @@ public class RegisterTests extends BaseTest {
                 .submitEmailForRegistration(user.getEmail())
                 .submitEmptyRegistrationInfo();
 
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
-        softAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        softAssert.assertAll();
+        CustomAssert customAssert = new CustomAssert();
+        customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
+        customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown - the user is unlogged");
+        customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
+        customAssert.assertAll();
+
     }
 }
