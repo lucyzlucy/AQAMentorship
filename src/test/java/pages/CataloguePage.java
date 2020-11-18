@@ -48,7 +48,6 @@ public class CataloguePage extends BasePage {
     }
 
     public Product chooseRandomProduct() {
-
         List<WebElement> children = productList.findElements(By.xpath("./li"));
         WebElement productElement = children.get(getRandomIntWithinSize(children.size()));
         String productName = productElement.findElement(By.className("product-name")).getText();

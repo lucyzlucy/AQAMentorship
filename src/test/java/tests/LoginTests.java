@@ -12,7 +12,6 @@ import utils.CustomAssert;
 import utils.StringGeneratorUtils;
 
 import static data.TestData.*;
-import static environment.Environment.getEnvProperty;
 
 public class LoginTests extends BaseTest {
 
@@ -48,7 +47,7 @@ public class LoginTests extends BaseTest {
         customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
         customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown");
         customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorEmptyEmail")), "The message about empty email is correct");
+        customAssert.assertTrue(page.getErrorMessage().contains(environment.getEnvProperty("errorEmptyEmail")), "The message about empty email is correct");
         customAssert.assertAll();
      }
 
@@ -61,7 +60,7 @@ public class LoginTests extends BaseTest {
         customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
         customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown");
         customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorInvalidEmail")), "The message about invalid email is correct");
+        customAssert.assertTrue(page.getErrorMessage().contains(environment.getEnvProperty("errorInvalidEmail")), "The message about invalid email is correct");
         customAssert.assertAll();
     }
 
@@ -74,7 +73,7 @@ public class LoginTests extends BaseTest {
         customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
         customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown");
         customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorInvalidPass")), "The message about invalid password is correct");
+        customAssert.assertTrue(page.getErrorMessage().contains(environment.getEnvProperty("errorInvalidPass")), "The message about invalid password is correct");
         customAssert.assertAll();
     }
 

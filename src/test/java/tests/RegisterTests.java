@@ -9,7 +9,6 @@ import pages.SignInPage;
 import utils.CustomAssert;
 
 import static data.TestData.*;
-import static environment.Environment.getEnvProperty;
 
 public class RegisterTests extends BaseTest {
 
@@ -36,7 +35,7 @@ public class RegisterTests extends BaseTest {
         customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
         customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown - the user is unlogged");
         customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorInvalidEmail")), "The message about empty email is correct");
+        customAssert.assertTrue(page.getErrorMessage().contains(environment.getEnvProperty("errorInvalidEmail")), "The message about empty email is correct");
         customAssert.assertAll();
 
     }
@@ -52,7 +51,7 @@ public class RegisterTests extends BaseTest {
         customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
         customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown - the user is unlogged");
         customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
-        customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorExistingEmail")), "The message about empty email is correct");
+        customAssert.assertTrue(page.getErrorMessage().contains(environment.getEnvProperty("errorExistingEmail")), "The message about empty email is correct");
         customAssert.assertAll();
     }
 

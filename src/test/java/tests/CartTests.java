@@ -26,7 +26,7 @@ public class CartTests extends BaseTest {
     @Test
     public void verifyConfirmationPopupWithProductDetailsIsShown() {
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(page.getMessage().contains(Environment.getEnvProperty("successAddedToCartMessage")), "Confirmation message is shown");
+        softAssert.assertTrue(page.getMessage().contains(environment.getEnvProperty("successAddedToCartMessage")), "Confirmation message is shown");
         softAssert.assertEquals(page.getProductName(), product.getName(), "Correct name is shown");
         softAssert.assertEquals(page.getProductPrice(), product.getPrice(), "Correct price is shown");
         softAssert.assertAll();
@@ -47,6 +47,6 @@ public class CartTests extends BaseTest {
     public void verifyDeletingProductsFromCart() {
         page.closePopup();
         EmptyCartPage cartPage = page.clickOnCart().deleteProduct();
-        Assert.assertTrue(cartPage.getErrorMessage().contains(Environment.getEnvProperty("emptyCartMessage")), "Correct message about empty cart is shown");
+        Assert.assertTrue(cartPage.getErrorMessage().contains(environment.getEnvProperty("emptyCartMessage")), "Correct message about empty cart is shown");
     }
 }
