@@ -26,7 +26,7 @@ public class CryptUtil {
             final byte[] encValue = c.doFinal(valueEnc.getBytes());
             encryptedVal = new BASE64Encoder().encode(encValue);
         } catch (Exception ex) {
-            System.out.println("The Exception is=" + ex);
+            ex.printStackTrace();
         }
 
         return encryptedVal;
@@ -46,7 +46,7 @@ public class CryptUtil {
             final byte[] decValue = c.doFinal(decorVal);
             decryptedValue = new String(decValue);
         } catch (Exception ex) {
-            System.out.println("The Exception is=" + ex);
+            ex.printStackTrace();
         }
 
         return decryptedValue;
