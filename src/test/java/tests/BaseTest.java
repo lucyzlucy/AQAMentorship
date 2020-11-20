@@ -2,6 +2,7 @@ package tests;
 
 import driver.DriverWrapper;
 import environment.Environment;
+import environment.Environment1;
 import org.testng.annotations.*;
 
 public class BaseTest {
@@ -9,7 +10,7 @@ public class BaseTest {
 
     @BeforeSuite
     public void setUp() {
-        Environment environment = new Environment("src/test/resources/environment.properties");
+        Environment1 environment = new Environment1("src/test/resources/environment.properties");
     }
 
     @AfterMethod

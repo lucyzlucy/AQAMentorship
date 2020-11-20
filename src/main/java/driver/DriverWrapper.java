@@ -1,44 +1,19 @@
 package driver;
 
-import environment.Environment;
+import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+import java.util.List;
+
 public class DriverWrapper {
     protected static final int WAIT_ELEMENT_TIMEOUT = 10;
-    private static WebDriver driver;
-
-    private DriverWrapper() {
-        String type = Environment.getEnvProperty("browser");
-
-        switch (type) {
-            case "Chrome":
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver.exe");
-                driver = new ChromeDriver();
-                break;
-            case "Edge":
-                System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + "\\msedgedriver.exe");
-                driver = new EdgeDriver();
-                break;
-            case "Firefox":
-                System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\geckodriver.exe");
-                driver = new FirefoxDriver();
-                break;
-        }
-    }
-
-    public static WebDriver getDriver() {
-        if (driver == null) {
-            new DriverWrapper();
-        }
-        return driver;
-    }
+    private static WebDriver driver = DriverFactory.getDriver();
 
     public static void killDriverInstance() {
         driver.close();
@@ -50,15 +25,38 @@ public class DriverWrapper {
     }
 
     private static void waitForElementPresent(WebElement element) {
-        new WebDriverWait(getDriver(), WAIT_ELEMENT_TIMEOUT).until(ExpectedConditions.visibilityOf(element));
+        new WebDriverWait(driver, Duration.ofSeconds(WAIT_ELEMENT_TIMEOUT)).until(ExpectedConditions.visibilityOf(element));
     }
+
     public static boolean isElementLoaded(WebElement element) {
         try {
             waitForElementPresent(element);
             return true;
-        } catch (TimeoutException e){
+        } catch (TimeoutException e) {
             return false;
         }
+    }
+
+    public static String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
+
+    public static void navigateToPage(String url) {
+        driver.get(url);
+    }
+
+
+    public static WebElement getVisibleElement(String xpath) {
+
+        List<WebElement> elements = driver.findElements(By.xpath("//p[@class=\"product-name\"]"));
+        for (WebElement element : elements) {
+            if (element.isDisplayed()) {
+            }
+        }
+        return null;
+    }
+    public static void initElements(Object page) {
+        PageFactory.initElements(driver, page);
     }
 
 

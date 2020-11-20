@@ -11,6 +11,7 @@ import java.util.List;
 
 import static data.TestData.CATALOGUE_PAGE_URL;
 import static driver.DriverWrapper.isElementLoaded;
+import static driver.DriverWrapper.navigateToPage;
 import static utils.Randomizer.getRandomIntWithinSize;
 
 public class CataloguePage extends BasePage {
@@ -37,7 +38,7 @@ public class CataloguePage extends BasePage {
     protected WebElement cartButton;
 
     public CataloguePage() {
-        DriverWrapper.getDriver().get(CATALOGUE_PAGE_URL);
+        navigateToPage(CATALOGUE_PAGE_URL);
         waitForPageToLoad(productList);
     }
 

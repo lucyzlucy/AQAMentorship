@@ -1,5 +1,6 @@
 package pages;
 
+import driver.DriverFactory;
 import driver.DriverWrapper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
@@ -7,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
+import static driver.DriverWrapper.getCurrentUrl;
 import static driver.DriverWrapper.isElementLoaded;
 
 public class BasePage {
@@ -26,15 +28,15 @@ public class BasePage {
     protected WebElement closeButton;
 
     public BasePage() {
-        PageFactory.initElements(DriverWrapper.getDriver(), this);
+        DriverWrapper.initElements(this);
     }
 
     protected void waitForPageToLoad(WebElement keyElement) {
-        DriverWrapper.isElementLoaded(keyElement);
+        isElementLoaded(keyElement);
     }
 
     public String getUrl() {
-        return DriverWrapper.getDriver().getCurrentUrl();
+        return getCurrentUrl();
     }
 
     public SignInPage navigateToSignInPage() {
@@ -58,7 +60,7 @@ public class BasePage {
     }
 
     public String getErrorMessage() {
-            return alertBlock.getText();
+        return alertBlock.getText();
 //        }
     }
 

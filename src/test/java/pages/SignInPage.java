@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import static data.TestData.SIGNIN_PAGE_URL;
+import static driver.DriverWrapper.navigateToPage;
 
 public class SignInPage extends BasePage {
     @FindBy(id = "email")
@@ -23,7 +24,7 @@ public class SignInPage extends BasePage {
     private WebElement submitCreateButton;
 
     public SignInPage() {
-        DriverWrapper.getDriver().get(SIGNIN_PAGE_URL);
+        navigateToPage(SIGNIN_PAGE_URL);
         waitForPageToLoad(submitSignInButton);
     }
 

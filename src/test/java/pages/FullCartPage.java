@@ -22,13 +22,10 @@ public class FullCartPage extends CartPage {
     }
 
     public String getCartProductName() {
-        List<WebElement> list = DriverWrapper.getDriver().findElements(By.xpath("//p[@class=\"product-name\"]"));
-//        waitForElementPresent(getVisibleElement(list));
-        return getVisibleElement(list).getText();
+        return DriverWrapper.getVisibleElement("//p[@class=\"product-name\"]").getText();
     }
 
     public String getCartProductPrice() {
-//        waitForElementPresent(priceInCart);
         return priceInCart.getText();
     }
 
