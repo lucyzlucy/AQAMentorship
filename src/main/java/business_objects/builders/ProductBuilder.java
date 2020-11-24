@@ -25,9 +25,4 @@ public class ProductBuilder {
         product.setQuantity(quantity);
         return this;
     }
-
-    public ProductBuilder setProductElement(WebElement element) {
-        product.setProductElement(element);
-        return this;
-    }
 }

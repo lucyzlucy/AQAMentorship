@@ -6,6 +6,7 @@ import driver.DriverWrapper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.springframework.context.annotation.DependsOn;
 
 import java.util.List;
 
@@ -19,8 +20,8 @@ public class CataloguePage extends BasePage {
     @FindBy(className = "menu-content")
     protected WebElement catalogueMenu;
 
-    @FindBy(className = "product_list")
-    protected WebElement productList;
+    @FindBy(xpath = "//*[contains(@class, 'product_list')]/li")
+    protected List<WebElement> productList;
 
     @FindBy(id = "layer_cart_product_title")
     protected WebElement productName;
@@ -37,9 +38,12 @@ public class CataloguePage extends BasePage {
     @FindBy(xpath = "//div[@class='shopping_cart']/a")
     protected WebElement cartButton;
 
+    protected WebElement productElement;
+
+
     public CataloguePage() {
         navigateToPage(CATALOGUE_PAGE_URL);
-        waitForPageToLoad(productList);
+        waitForPageToLoad(catalogueMenu);
     }
 
     public CataloguePage clickOnRandomCatalogueSection() {
@@ -49,17 +53,17 @@ public class CataloguePage extends BasePage {
     }
 
     public Product chooseRandomProduct() {
-        List<WebElement> children = productList.findElements(By.xpath("./li"));
-        WebElement productElement = children.get(getRandomIntWithinSize(children.size()));
-        String productName = productElement.findElement(By.className("product-name")).getText();
+        productElement = productList.get(getRandomIntWithinSize(productList.size()));
 
+        String productName = productElement.findElement(By.className("product-name")).getText();
         String productPrice = getVisibleElement(productElement.findElements(By.className("price"))).getText();
-        return new ProductBuilder().setName(productName).setPrice(productPrice).setProductElement(productElement).make();
+
+        return new ProductBuilder().setName(productName).setPrice(productPrice).make();
     }
 
-    public CataloguePage addProductToCart(Product product) {
-        product.getProductElement().click();
-        product.getProductElement().findElement(By.className("ajax_add_to_cart_button")).click();
+    public CataloguePage addProductToCart() {
+        productElement.click();
+        productElement.findElement(By.className("ajax_add_to_cart_button")).click();
         return this;
     }
 

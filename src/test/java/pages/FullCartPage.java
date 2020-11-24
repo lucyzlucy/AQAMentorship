@@ -14,7 +14,7 @@ public class FullCartPage extends CartPage {
     @FindBy(xpath = "//span[@class=\"price\"]/span")
     protected WebElement priceInCart;
 
-    @FindBy(xpath = "//p[@class=\"product-name\"][0]")
+    @FindBy(xpath = "//p[@class=\"product-name\"][1]")
     protected WebElement nameInCart;
 
     public FullCartPage() {

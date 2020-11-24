@@ -10,5 +10,4 @@ public class Product {
     private String name;
     private String price;
     private int quantity = 1;
-    private WebElement productElement;
 }
