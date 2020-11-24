@@ -45,18 +45,6 @@ public class DriverWrapper {
         driver.get(url);
     }
 
-
-    public static WebElement getVisibleElement(String xpath) {
-
-        List<WebElement> elements = driver.findElements(By.xpath("//p[@class=\"product-name\"]"));
-        for (WebElement element : elements) {
-            if (element.isDisplayed()) {
-                return element;
-            }
-        }
-        return null;
-    }
-
     public static void initElements(Object page) {
         PageFactory.initElements(driver, page);
     }

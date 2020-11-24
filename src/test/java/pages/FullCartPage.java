@@ -1,11 +1,9 @@
 package pages;
 
 import driver.DriverWrapper;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.List;
 
 public class FullCartPage extends CartPage {
     @FindBy(className = "cart_quantity_delete")
@@ -14,7 +12,7 @@ public class FullCartPage extends CartPage {
     @FindBy(xpath = "//span[@class=\"price\"]/span")
     protected WebElement priceInCart;
 
-    @FindBy(xpath = "//p[@class=\"product-name\"][1]")
+    @FindBy(xpath = "//tr[1]//p[@class=\"product-name\"]")
     protected WebElement nameInCart;
 
     public FullCartPage() {
@@ -22,7 +20,7 @@ public class FullCartPage extends CartPage {
     }
 
     public String getCartProductName() {
-        return DriverWrapper.getVisibleElement("//p[@class=\"product-name\"]").getText();
+        return nameInCart.getText();
     }
 
     public String getCartProductPrice() {
