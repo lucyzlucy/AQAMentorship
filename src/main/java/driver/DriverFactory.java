@@ -22,6 +22,7 @@ public class DriverFactory {
                 return new FirefoxDriver();
             default:
                 System.out.println("No browser");
+                System.exit(-1);
                 return null;
         }
     }

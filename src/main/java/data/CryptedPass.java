@@ -4,8 +4,8 @@ import environment.Environment;
 import utils.CryptUtil;
 
 public class CryptedPass {
-    private static final String pathName = "user.password.key";
-    private static final String encryptedValue = "user.password";
+    private static final String pathName = "userPasswordKey";
+    private static final String encryptedValue = "userPassword";
 
 
     public static String getDecodedPass() {

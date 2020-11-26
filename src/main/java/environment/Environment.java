@@ -16,7 +16,7 @@ public class Environment {
     }
 
     public static String getEnvProperty(String key) {
-        return applicationProps.getProperty(key).toString();
+        return applicationProps.getString(key);
     }
 
     public static void setEnvProperty(String key, String value) {
