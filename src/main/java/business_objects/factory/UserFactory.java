@@ -24,6 +24,6 @@ public class UserFactory {
     }
 
     public static User getExistingUser() {
-        return new UserBuilder().setEmail(Environment.getEnvProperty("user.email")).setPassword(getDecodedPass()).make();
+        return new UserBuilder().setEmail(Environment.getEnvProperty("userEmail")).setPassword(getDecodedPass()).make();
     }
 }

@@ -10,10 +10,9 @@ public class BaseTest {
         DriverWrapper.clearBrowserCookies();
     }
 
-    @AfterSuite
-    public void close() {
 
+    @AfterClass
+    public void close() {
         DriverWrapper.killDriverInstance();
     }
-
 }

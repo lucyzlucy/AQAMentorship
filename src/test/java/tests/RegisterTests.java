@@ -2,6 +2,7 @@ package tests;
 
 import business_objects.entities.User;
 import business_objects.factory.UserFactory;
+import environment.Environment;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.RegisterPage;
@@ -22,7 +23,7 @@ public class RegisterTests extends BaseTest {
                 .submitValidRegistrationInfo(user);
 
         CustomAssert customAssert = new CustomAssert();
-        customAssert.assertTrue(page.getUrl().contains(MY_ACCOUNT_PAGE));
+        customAssert.assertTrue(page.getUrl().contains(getEnvProperty("myAccountInPageUrl")));
         customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "Account and signout buttons are shown - the user is logged");
         customAssert.assertAll();
     }
@@ -33,7 +34,7 @@ public class RegisterTests extends BaseTest {
                 .submitEmptyEmailForRegistration();
 
         CustomAssert customAssert = new CustomAssert();
-        customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
+        customAssert.assertEquals(page.getUrl(), getEnvProperty("signInPageUrl"), "The user stays on login page");
         customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown - the user is unlogged");
         customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
         customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorInvalidEmail")), "The message about empty email is correct");
@@ -49,7 +50,7 @@ public class RegisterTests extends BaseTest {
                 .submitExistingEmailForRegistration(user.getEmail());
 
         CustomAssert customAssert = new CustomAssert();
-        customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
+        customAssert.assertEquals(page.getUrl(), getEnvProperty("signInPageUrl"), "The user stays on login page");
         customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown - the user is unlogged");
         customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
         customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorExistingEmail")), "The message about empty email is correct");
@@ -65,7 +66,7 @@ public class RegisterTests extends BaseTest {
                 .submitEmptyRegistrationInfo();
 
         CustomAssert customAssert = new CustomAssert();
-        customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
+        customAssert.assertEquals(page.getUrl(), getEnvProperty("signInPageUrl"), "The user stays on login page");
         customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown - the user is unlogged");
         customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
         customAssert.assertAll();

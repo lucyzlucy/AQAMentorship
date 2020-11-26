@@ -22,7 +22,7 @@ public class LoginTests extends BaseTest {
                 .navigateToSignInPage();
 
         CustomAssert custAssert = new CustomAssert();
-        custAssert.assertTrue(page.getUrl().contains(SIGNIN_PAGE_URL), "SIGNIN_PAGE_URL is opened");
+        custAssert.assertTrue(page.getUrl().contains(getEnvProperty("signInPageUrl")), "SIGNIN_PAGE_URL is opened");
         custAssert.assertAll();
     }
 
@@ -34,7 +34,7 @@ public class LoginTests extends BaseTest {
                 .submitCredentials(user.getEmail(), user.getPassword());
 
         CustomAssert custAssert = new CustomAssert();
-        custAssert.assertEquals(page.getUrl(), MY_ACCOUNT_PAGE, "The user is redirected to account page");
+        custAssert.assertEquals(page.getUrl(), getEnvProperty("myAccountInPageUrl"), "The user is redirected to account page");
         custAssert.assertTrue(page.loggedUserHeaderIsShown(), "Account and signout buttons are shown");
         custAssert.assertAll();
     }
@@ -45,7 +45,7 @@ public class LoginTests extends BaseTest {
                 .submitEmptyCredentials();
 
         CustomAssert customAssert = new CustomAssert();
-        customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
+        customAssert.assertEquals(page.getUrl(), getEnvProperty("signInPageUrl"), "The user stays on login page");
         customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown");
         customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
         customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorEmptyEmail")), "The message about empty email is correct");
@@ -54,11 +54,12 @@ public class LoginTests extends BaseTest {
 
     @Test(dataProviderClass = TestDataProvider.class, dataProvider = "invalidEmails")
     public void verifyCannotLoginWithInvalidEmail(String invalidEmail) {
+
         SignInPage page = new SignInPage()
                 .submitCredentials(invalidEmail, StringGeneratorUtils.getRandomPassword());
 
         CustomAssert customAssert = new CustomAssert();
-        customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
+        customAssert.assertEquals(page.getUrl(), getEnvProperty("signInPageUrl"), "The user stays on login page");
         customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown");
         customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
         customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorInvalidEmail")), "The message about invalid email is correct");
@@ -71,7 +72,7 @@ public class LoginTests extends BaseTest {
                 .submitCredentials(StringGeneratorUtils.getRandomEmail(), invalidPassword);
 
         CustomAssert customAssert = new CustomAssert();
-        customAssert.assertEquals(page.getUrl(), SIGNIN_PAGE_URL, "The user stays on login page");
+        customAssert.assertEquals(page.getUrl(), getEnvProperty("signInPageUrl"), "The user stays on login page");
         customAssert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown");
         customAssert.assertTrue(page.errorBlockIsVisible(), "An error message is shown");
         customAssert.assertTrue(page.getErrorMessage().contains(getEnvProperty("errorInvalidPass")), "The message about invalid password is correct");

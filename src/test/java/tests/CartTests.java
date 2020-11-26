@@ -1,7 +1,6 @@
 package tests;
 
 import business_objects.entities.Product;
-import environment.Environment;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -20,13 +19,11 @@ public class CartTests extends BaseTest {
     @BeforeMethod
     public void addProductToCart() {
         page = new CataloguePage();
-        product = page.clickOnRandomCatalogueSection().chooseRandomProduct();
-        page.addProductToCart();
+        product = page.clickOnRandomCatalogueSection().chooseRandomProduct().addProductToCart().getProduct();
     }
 
     @Test
     public void verifyConfirmationPopupWithProductDetailsIsShown() {
-
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(page.getMessage().contains(getEnvProperty("successAddedToCartMessage")), "Confirmation message is shown");
         softAssert.assertEquals(page.getProductName(), product.getName(), "Correct name is shown");

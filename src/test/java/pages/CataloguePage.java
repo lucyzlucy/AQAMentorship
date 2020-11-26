@@ -10,9 +10,7 @@ import org.springframework.context.annotation.DependsOn;
 
 import java.util.List;
 
-import static data.TestData.CATALOGUE_PAGE_URL;
 import static driver.DriverWrapper.isElementLoaded;
-import static driver.DriverWrapper.navigateToPage;
 import static utils.Randomizer.getRandomIntWithinSize;
 
 public class CataloguePage extends BasePage {
@@ -38,11 +36,8 @@ public class CataloguePage extends BasePage {
     @FindBy(xpath = "//div[@class='shopping_cart']/a")
     protected WebElement cartButton;
 
-    protected WebElement productElement;
-
-
     public CataloguePage() {
-        navigateToPage(CATALOGUE_PAGE_URL);
+//        navigateToPage(CATALOGUE_PAGE_URL);
         waitForPageToLoad(catalogueMenu);
     }
 
@@ -52,19 +47,9 @@ public class CataloguePage extends BasePage {
         return this;
     }
 
-    public Product chooseRandomProduct() {
-        productElement = productList.get(getRandomIntWithinSize(productList.size()));
-
-        String productName = productElement.findElement(By.className("product-name")).getText();
-        String productPrice = getVisibleElement(productElement.findElements(By.className("price"))).getText();
-
-        return new ProductBuilder().setName(productName).setPrice(productPrice).make();
-    }
-
-    public CataloguePage addProductToCart() {
-        productElement.click();
-        productElement.findElement(By.className("ajax_add_to_cart_button")).click();
-        return this;
+    public ProductCell chooseRandomProduct() {
+        WebElement productElement = productList.get(getRandomIntWithinSize(productList.size()));
+        return new ProductCell(productElement);
     }
 
     public String getMessage() {

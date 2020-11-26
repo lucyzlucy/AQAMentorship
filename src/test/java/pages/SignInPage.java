@@ -1,9 +1,9 @@
 package pages;
 
+import environment.Environment;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static data.TestData.SIGNIN_PAGE_URL;
 import static driver.DriverWrapper.navigateToPage;
 
 public class SignInPage extends BasePage {
@@ -23,7 +23,7 @@ public class SignInPage extends BasePage {
     private WebElement submitCreateButton;
 
     public SignInPage() {
-        navigateToPage(SIGNIN_PAGE_URL);
+//        navigateToPage(Environment.getEnvProperty("signInPageUrl"));
         waitForPageToLoad(submitSignInButton);
     }
 
