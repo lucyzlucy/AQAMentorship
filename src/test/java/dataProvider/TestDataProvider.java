@@ -1,22 +1,18 @@
 package dataProvider;
 
+import data.TestData;
 import org.testng.annotations.DataProvider;
+import utils.ArrayUtil;
 
 public class TestDataProvider {
 
     @DataProvider
     public static Object[][] invalidEmails() {
-        return new Object[][]{
-                {"example.com"},
-                {"A@b@c@domain.com"},
-                {"ab(c)d,e:f;gij\\k]l@domain.com"}};
+        return ArrayUtil.buildATwoDimensionalArray(TestData.getUsersWithInvalidEmails());
     }
 
     @DataProvider
     public static Object[][] invalidPasswords() {
-        return new Object[][]{
-                {"abcd"},
-                {"1234"}
-        };
+        return ArrayUtil.buildATwoDimensionalArray(TestData.getUsersWithInvalidPasswords());
     }
 }

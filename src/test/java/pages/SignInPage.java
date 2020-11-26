@@ -1,10 +1,12 @@
 package pages;
 
+import business_objects.entities.User;
 import environment.Environment;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import static driver.DriverWrapper.navigateToPage;
+
 
 public class SignInPage extends BasePage {
     @FindBy(id = "email")
@@ -23,13 +25,13 @@ public class SignInPage extends BasePage {
     private WebElement submitCreateButton;
 
     public SignInPage() {
-//        navigateToPage(Environment.getEnvProperty("signInPageUrl"));
+        navigateToPage(Environment.getEnvProperty("signInPageUrl"));
         waitForPageToLoad(submitSignInButton);
     }
 
-    public SignInPage submitCredentials(String email, String password) {
-        emailInput.sendKeys(email);
-        passInput.sendKeys(password);
+    public SignInPage submitCredentials(User user) {
+        emailInput.sendKeys(user.getEmail());
+        passInput.sendKeys(user.getPassword());
         submitSignInButton.click();
         return this;
     }

@@ -2,14 +2,11 @@ package tests;
 
 import business_objects.entities.User;
 import business_objects.factory.UserFactory;
-import environment.Environment;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.RegisterPage;
 import pages.SignInPage;
 import utils.CustomAssert;
 
-import static data.TestData.*;
 import static environment.Environment.getEnvProperty;
 
 public class RegisterTests extends BaseTest {

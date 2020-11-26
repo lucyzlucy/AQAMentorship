@@ -9,9 +9,7 @@ import pages.BasePage;
 import pages.CataloguePage;
 import pages.SignInPage;
 import utils.CustomAssert;
-import utils.StringGeneratorUtils;
 
-import static data.TestData.*;
 import static environment.Environment.getEnvProperty;
 
 public class LoginTests extends BaseTest {
@@ -31,7 +29,7 @@ public class LoginTests extends BaseTest {
         User user = UserFactory.getExistingUser();
 
         SignInPage page = new SignInPage()
-                .submitCredentials(user.getEmail(), user.getPassword());
+                .submitCredentials(user);
 
         CustomAssert custAssert = new CustomAssert();
         custAssert.assertEquals(page.getUrl(), getEnvProperty("myAccountInPageUrl"), "The user is redirected to account page");
@@ -53,10 +51,10 @@ public class LoginTests extends BaseTest {
     }
 
     @Test(dataProviderClass = TestDataProvider.class, dataProvider = "invalidEmails")
-    public void verifyCannotLoginWithInvalidEmail(String invalidEmail) {
+    public void verifyCannotLoginWithInvalidEmail(User invalidEmailUser) {
 
         SignInPage page = new SignInPage()
-                .submitCredentials(invalidEmail, StringGeneratorUtils.getRandomPassword());
+                .submitCredentials(invalidEmailUser);
 
         CustomAssert customAssert = new CustomAssert();
         customAssert.assertEquals(page.getUrl(), getEnvProperty("signInPageUrl"), "The user stays on login page");
@@ -67,9 +65,9 @@ public class LoginTests extends BaseTest {
     }
 
     @Test(dataProviderClass = TestDataProvider.class, dataProvider = "invalidPasswords")
-    public void verifyCannotLoginWithInvalidPassword(String invalidPassword) {
+    public void verifyCannotLoginWithInvalidPassword(User invalidPassUser) {
         SignInPage page = new SignInPage()
-                .submitCredentials(StringGeneratorUtils.getRandomEmail(), invalidPassword);
+                .submitCredentials(invalidPassUser);
 
         CustomAssert customAssert = new CustomAssert();
         customAssert.assertEquals(page.getUrl(), getEnvProperty("signInPageUrl"), "The user stays on login page");
@@ -84,7 +82,7 @@ public class LoginTests extends BaseTest {
         User user = UserFactory.getExistingUser();
 
         BasePage page = new SignInPage()
-                .submitCredentials(user.getEmail(), user.getPassword())
+                .submitCredentials(user)
                 .clickOnSignOut();
 
         Assert.assertTrue(page.unloggedUserHeaderIsShown(), "No account and signout buttons are shown");
