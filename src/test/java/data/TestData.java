@@ -2,12 +2,33 @@ package data;
 
 import business_objects.builders.UserBuilder;
 import business_objects.entities.User;
+import environment.Environment;
 import utils.JsonParsingUtil;
-import utils.Randomizer;
 import utils.StringGeneratorUtils;
+
+import static data.CryptedPass.getDecodedPass;
+import static utils.StringGeneratorUtils.getRandomPassword;
 
 public class TestData {
     private static final String TEST_DATA_JSON_PATH = "src/test/resources/test_data.json";
+
+    public static User getNewUser() {
+        return new UserBuilder().setEmail(StringGeneratorUtils.getRandomEmail())
+                .setPassword(getRandomPassword())
+                .setFirstName(StringGeneratorUtils.getRandomName())
+                .setLastName(StringGeneratorUtils.getRandomName())
+                .setAddress(StringGeneratorUtils.getRandomName())
+                .setCity(StringGeneratorUtils.getRandomName())
+                .setCountry("United States")
+                .setState("Alabama")
+                .setZip(StringGeneratorUtils.getRandomNumber())
+                .setPhone(StringGeneratorUtils.getRandomNumber())
+                .make();
+    }
+
+    public static User getExistingUser() {
+        return new UserBuilder().setEmail(Environment.getEnvProperty("userEmail")).setPassword(getDecodedPass()).make();
+    }
 
     public static User[] getUsersWithInvalidEmails() {
         String validPassword = JsonParsingUtil.getValue(TEST_DATA_JSON_PATH, "valid_pass");

@@ -1,7 +1,7 @@
 package tests;
 
 import business_objects.entities.User;
-import business_objects.factory.UserFactory;
+import data.TestData;
 import org.testng.annotations.Test;
 import pages.RegisterPage;
 import pages.SignInPage;
@@ -13,7 +13,7 @@ public class RegisterTests extends BaseTest {
 
     @Test
     public void verifyCanRegister() {
-        User user = UserFactory.getNewUser();
+        User user = TestData.getNewUser();
 
         RegisterPage page = new SignInPage()
                 .submitEmailForRegistration(user.getEmail())
@@ -41,7 +41,7 @@ public class RegisterTests extends BaseTest {
 
     @Test
     public void verifyCannotRegisterWithExistingEmail() {
-        User user = UserFactory.getExistingUser();
+        User user = TestData.getExistingUser();
 
         SignInPage page = new SignInPage()
                 .submitExistingEmailForRegistration(user.getEmail());
@@ -56,7 +56,7 @@ public class RegisterTests extends BaseTest {
 
     @Test
     public void verifyCannotRegisterWithEmptyInfo() {
-        User user = UserFactory.getNewUser();
+        User user = TestData.getNewUser();
 
         RegisterPage page = new SignInPage()
                 .submitEmailForRegistration(user.getEmail())

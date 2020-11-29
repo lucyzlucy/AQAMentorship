@@ -1,8 +1,8 @@
 package tests;
 
 import business_objects.entities.User;
-import business_objects.factory.UserFactory;
-import dataProvider.TestDataProvider;
+import data.TestData;
+import data.dataProvider.TestDataProvider;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.BasePage;
@@ -26,7 +26,7 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void verifyCanSignInWithValidCredentials() {
-        User user = UserFactory.getExistingUser();
+        User user = TestData.getExistingUser();
 
         SignInPage page = new SignInPage()
                 .submitCredentials(user);
@@ -79,7 +79,7 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void verifyCanLogout() {
-        User user = UserFactory.getExistingUser();
+        User user = TestData.getExistingUser();
 
         BasePage page = new SignInPage()
                 .submitCredentials(user)
