@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4246cf7-c8d2-4438-87a5-6b6e4613685d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/driver/DriverFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/driver/IWebDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/environment/Environment1.java" afterDir="false" />
+    <list default="true" id="c4246cf7-c8d2-4438-87a5-6b6e4613685d" name="Default Changelist" comment="&quot;Removed env from tests. Refactored product in Catalogue page&quot;">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/driver/DriverWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/driver/DriverWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/environment/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/environment/Environment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CataloguePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CataloguePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/FullCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/FullCartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SignInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestSample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestSample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/environment.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/environment.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business_objects/builders/ProductBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business_objects/builders/ProductBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business_objects/entities/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business_objects/entities/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business_objects/factory/UserFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business_objects/factory/UserFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data/CryptedPass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/CryptedPass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data/TestData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/TestData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/driver/DriverFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/driver/DriverFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/driver/DriverWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/driver/DriverWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/driver/IWebDriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/environment/Environment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/environment/Environment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/environment/Environment1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/dataProvider/TestDataProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dataProvider/TestDataProvider.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/environment.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/environment.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/CataloguePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/CataloguePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/FullCartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/FullCartPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/SignInPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/SignInPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/CartTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/CartTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/LoginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/LoginTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/RegisterTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/RegisterTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/TestSample.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -58,14 +67,17 @@
     <property name="settings.editor.selected.configurable" value="copyright.filetypes.HTML" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="driver" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Liudmyla_Tuteiko\IdeaProjects\AQAMentorshipEPAM\src\test" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="driver" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="driver" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginTests.verifyCannotSubmitEmptyFields">
+  <component name="RunManager" selected="TestNG.LoginTests.verifyCannotLoginWithInvalidEmail">
     <configuration name="CartTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQAMentorshipEPAM" />
       <extension name="coverage">
@@ -79,6 +91,33 @@
       <option name="MAIN_CLASS_NAME" value="tests.CartTests" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CartTests.verifyConfirmationPopupWithProductDetailsIsShown" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQAMentorshipEPAM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CartTests" />
+      <option name="METHOD_NAME" value="verifyConfirmationPopupWithProductDetailsIsShown" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="" />
@@ -119,7 +158,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTests.verifyCannotSubmitEmptyFields" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTests.verifyCannotLoginWithInvalidEmail" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQAMentorshipEPAM" />
       <extension name="coverage">
         <pattern>
@@ -130,7 +169,7 @@
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.LoginTests" />
-      <option name="METHOD_NAME" value="verifyCannotSubmitEmptyFields" />
+      <option name="METHOD_NAME" value="verifyCannotLoginWithInvalidEmail" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
@@ -146,7 +185,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSample" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTests.verifyCannotLoginWithInvalidPassword" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQAMentorshipEPAM" />
       <extension name="coverage">
         <pattern>
@@ -156,34 +195,8 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TestSample" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestSample.addProductToCart" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQAMentorshipEPAM" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TestSample" />
-      <option name="METHOD_NAME" value="addProductToCart" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTests" />
+      <option name="METHOD_NAME" value="verifyCannotLoginWithInvalidPassword" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
@@ -218,19 +231,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.CartTests" />
-      <item itemvalue="TestNG.TestSample.addProductToCart" />
-      <item itemvalue="TestNG.TestSample" />
       <item itemvalue="TestNG.LoginTests.verifyCanNavigateToSignInPageFromMain" />
-      <item itemvalue="TestNG.LoginTests.verifyCannotSubmitEmptyFields" />
+      <item itemvalue="TestNG.CartTests.verifyConfirmationPopupWithProductDetailsIsShown" />
+      <item itemvalue="TestNG.CartTests" />
+      <item itemvalue="TestNG.LoginTests.verifyCannotLoginWithInvalidPassword" />
+      <item itemvalue="TestNG.LoginTests.verifyCannotLoginWithInvalidEmail" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginTests.verifyCannotSubmitEmptyFields" />
+        <item itemvalue="TestNG.LoginTests.verifyCannotLoginWithInvalidEmail" />
+        <item itemvalue="TestNG.LoginTests.verifyCannotLoginWithInvalidPassword" />
         <item itemvalue="TestNG.LoginTests.verifyCanNavigateToSignInPageFromMain" />
-        <item itemvalue="TestNG.TestSample" />
-        <item itemvalue="TestNG.TestSample.addProductToCart" />
         <item itemvalue="TestNG.CartTests" />
+        <item itemvalue="TestNG.CartTests.verifyConfirmationPopupWithProductDetailsIsShown" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +270,67 @@
       <option name="presentableId" value="Default" />
       <updated>1604476884065</updated>
     </task>
+    <task id="LOCAL-00001" summary="&quot;Removed env from tests. Refactored product in Catalogue page&quot;">
+      <created>1606235580214</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606235580214</updated>
+    </task>
+    <task id="LOCAL-00002" summary="&quot;Small refactoring of driver classes&quot;">
+      <created>1606235678934</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606235678934</updated>
+    </task>
+    <task id="LOCAL-00003" summary="&quot;Refactored xpath. Removed unnecessary getVisibleElement method&quot;">
+      <created>1606236306128</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606236306128</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;Refactored env&quot;">
+      <created>1606384498073</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606384498073</updated>
+    </task>
+    <task id="LOCAL-00005" summary="&quot;Refactored env2&quot;">
+      <created>1606384548307</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606384548307</updated>
+    </task>
+    <task id="LOCAL-00006" summary="&quot;Added Json Util and TestData methods to work with it&quot;">
+      <created>1606390947506</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1606390947506</updated>
+    </task>
+    <task id="LOCAL-00007" summary="&quot;Moved data to test folder&quot;">
+      <created>1606664550196</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606664550196</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;Removed env from tests. Refactored product in Catalogue page&quot;" />
+    <MESSAGE value="&quot;Small refactoring of driver classes&quot;" />
+    <MESSAGE value="&quot;Refactored xpath. Removed unnecessary getVisibleElement method&quot;" />
+    <MESSAGE value="&quot;Refactored env&quot;" />
+    <MESSAGE value="&quot;Refactored env2&quot;" />
+    <MESSAGE value="&quot;Added Json Util and TestData methods to work with it&quot;" />
+    <MESSAGE value="&quot;Moved data to test folder&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Moved data to test folder&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="266" y="20" key="#Project_Structure" timestamp="1604995562346">
@@ -279,9 +352,10 @@
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
     <state x="2685" y="317" key="#com.intellij.ide.util.MemberChooser/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605187477630" />
-    <state x="315" y="287" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1604492414684">
-      <screen x="67" y="0" width="1213" height="720" />
+    <state x="2313" y="478" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1606664437834">
+      <screen x="1920" y="0" width="1920" height="1200" />
     </state>
+    <state x="2313" y="478" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606664437834" />
     <state x="315" y="287" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604492414684" />
     <state x="2605" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604568530284">
       <screen x="1920" y="0" width="1920" height="1200" />
@@ -291,65 +365,69 @@
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
     <state x="2610" y="348" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605090279012" />
-    <state width="1877" height="487" key="GridCell.Tab.0.bottom" timestamp="1605865263915">
+    <state x="2455" y="195" key="CommitChangelistDialog2" timestamp="1606664708037">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1157" height="412" key="GridCell.Tab.0.bottom/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605188088215" />
+    <state x="2455" y="195" key="CommitChangelistDialog2/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606664708037" />
+    <state width="1877" height="444" key="GridCell.Tab.0.bottom" timestamp="1606395330675">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state width="1877" height="444" key="GridCell.Tab.0.bottom/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606395330675" />
     <state width="1173" height="168" key="GridCell.Tab.0.bottom/63.0.1217.720/1920.0.1920.1200@63.0.1217.720" timestamp="1605174818425" />
-    <state width="1877" height="487" key="GridCell.Tab.0.bottom/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605865263915" />
+    <state width="1877" height="460" key="GridCell.Tab.0.bottom/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416669" />
     <state width="1877" height="437" key="GridCell.Tab.0.bottom/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604934132157" />
     <state width="1169" height="235" key="GridCell.Tab.0.bottom/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604930032871" />
     <state width="1154" height="418" key="GridCell.Tab.0.bottom/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
-    <state width="1877" height="487" key="GridCell.Tab.0.center" timestamp="1605865263914">
+    <state width="1877" height="444" key="GridCell.Tab.0.center" timestamp="1606395330675">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1157" height="412" key="GridCell.Tab.0.center/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605188088215" />
+    <state width="1877" height="444" key="GridCell.Tab.0.center/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606395330675" />
     <state width="1173" height="168" key="GridCell.Tab.0.center/63.0.1217.720/1920.0.1920.1200@63.0.1217.720" timestamp="1605174818425" />
-    <state width="1877" height="487" key="GridCell.Tab.0.center/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605865263914" />
+    <state width="1877" height="460" key="GridCell.Tab.0.center/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416669" />
     <state width="1877" height="437" key="GridCell.Tab.0.center/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604934132156" />
     <state width="1169" height="235" key="GridCell.Tab.0.center/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604930032870" />
     <state width="1154" height="418" key="GridCell.Tab.0.center/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
-    <state width="1877" height="487" key="GridCell.Tab.0.left" timestamp="1605865263914">
+    <state width="1877" height="444" key="GridCell.Tab.0.left" timestamp="1606395330675">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1157" height="412" key="GridCell.Tab.0.left/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605188088215" />
+    <state width="1877" height="444" key="GridCell.Tab.0.left/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606395330675" />
     <state width="1173" height="168" key="GridCell.Tab.0.left/63.0.1217.720/1920.0.1920.1200@63.0.1217.720" timestamp="1605174818425" />
-    <state width="1877" height="487" key="GridCell.Tab.0.left/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605865263914" />
+    <state width="1877" height="460" key="GridCell.Tab.0.left/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416668" />
     <state width="1877" height="437" key="GridCell.Tab.0.left/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604934132156" />
     <state width="1169" height="235" key="GridCell.Tab.0.left/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604930032870" />
     <state width="1154" height="418" key="GridCell.Tab.0.left/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
-    <state width="1877" height="487" key="GridCell.Tab.0.right" timestamp="1605865263914">
+    <state width="1877" height="444" key="GridCell.Tab.0.right" timestamp="1606395330675">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1157" height="412" key="GridCell.Tab.0.right/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605188088215" />
+    <state width="1877" height="444" key="GridCell.Tab.0.right/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606395330675" />
     <state width="1173" height="168" key="GridCell.Tab.0.right/63.0.1217.720/1920.0.1920.1200@63.0.1217.720" timestamp="1605174818425" />
-    <state width="1877" height="487" key="GridCell.Tab.0.right/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605865263914" />
+    <state width="1877" height="460" key="GridCell.Tab.0.right/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416669" />
     <state width="1877" height="437" key="GridCell.Tab.0.right/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604934132157" />
     <state width="1169" height="235" key="GridCell.Tab.0.right/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604930032871" />
     <state width="1154" height="418" key="GridCell.Tab.0.right/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
-    <state width="1877" height="460" key="GridCell.Tab.1.bottom" timestamp="1605865038145">
+    <state width="1877" height="460" key="GridCell.Tab.1.bottom" timestamp="1606307917303">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="484" key="GridCell.Tab.1.bottom/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605022026159" />
-    <state width="1877" height="460" key="GridCell.Tab.1.bottom/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605865038145" />
+    <state width="1877" height="460" key="GridCell.Tab.1.bottom/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606307917303" />
+    <state width="1877" height="460" key="GridCell.Tab.1.bottom/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416670" />
     <state width="1877" height="412" key="GridCell.Tab.1.bottom/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604677166253" />
-    <state width="1877" height="460" key="GridCell.Tab.1.center" timestamp="1605865038144">
+    <state width="1877" height="460" key="GridCell.Tab.1.center" timestamp="1606307917303">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="484" key="GridCell.Tab.1.center/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605022026159" />
-    <state width="1877" height="460" key="GridCell.Tab.1.center/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605865038144" />
+    <state width="1877" height="460" key="GridCell.Tab.1.center/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606307917303" />
+    <state width="1877" height="460" key="GridCell.Tab.1.center/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416670" />
     <state width="1877" height="412" key="GridCell.Tab.1.center/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604677166253" />
-    <state width="1877" height="460" key="GridCell.Tab.1.left" timestamp="1605865038144">
+    <state width="1877" height="460" key="GridCell.Tab.1.left" timestamp="1606307917303">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="484" key="GridCell.Tab.1.left/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605022026159" />
-    <state width="1877" height="460" key="GridCell.Tab.1.left/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605865038144" />
+    <state width="1877" height="460" key="GridCell.Tab.1.left/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606307917303" />
+    <state width="1877" height="460" key="GridCell.Tab.1.left/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416669" />
     <state width="1877" height="412" key="GridCell.Tab.1.left/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604677166253" />
-    <state width="1877" height="460" key="GridCell.Tab.1.right" timestamp="1605865038144">
+    <state width="1877" height="460" key="GridCell.Tab.1.right" timestamp="1606307917303">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="484" key="GridCell.Tab.1.right/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605022026159" />
-    <state width="1877" height="460" key="GridCell.Tab.1.right/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605865038144" />
+    <state width="1877" height="460" key="GridCell.Tab.1.right/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606307917303" />
+    <state width="1877" height="460" key="GridCell.Tab.1.right/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416670" />
     <state width="1877" height="412" key="GridCell.Tab.1.right/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604677166253" />
     <state x="2137" y="28" key="Maven.ArtifactSearchDialog" timestamp="1605098742034">
       <screen x="1920" y="0" width="1920" height="1200" />
@@ -361,18 +439,23 @@
     </state>
     <state x="2091" y="7" key="SettingsEditor/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605087592770" />
     <state x="175" y="4" key="SettingsEditor/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604489190007" />
-    <state x="2894" y="444" key="com.intellij.ide.util.TipDialog" timestamp="1605720204176">
+    <state x="2472" y="322" key="Vcs.Push.Dialog.v2" timestamp="1606664553341">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
+    <state x="2472" y="322" key="Vcs.Push.Dialog.v2/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606664553341" />
+    <state x="2894" y="444" key="com.intellij.ide.util.TipDialog" timestamp="1606378929141">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2894" y="444" key="com.intellij.ide.util.TipDialog/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606378929141" />
     <state x="2894" y="444" key="com.intellij.ide.util.TipDialog/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605720204176" />
     <state x="2456" y="337" width="847" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1604666535620">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
     <state x="2456" y="337" width="847" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604666535620" />
-    <state x="37" y="15" width="1231" height="719" key="dock-window-1" timestamp="1605085700287">
+    <state x="-251" y="172" width="1231" height="804" maximized="true" key="dock-window-1" timestamp="1606387768812">
       <screen x="63" y="0" width="1217" height="720" />
     </state>
-    <state x="37" y="15" width="1231" height="719" key="dock-window-1/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605085700287" />
+    <state x="-251" y="172" width="1231" height="804" maximized="true" key="dock-window-1/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606387768812" />
     <state x="2576" y="332" width="607" height="536" key="find.popup" timestamp="1605087579753">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
@@ -382,15 +465,23 @@
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
     <state x="2521" y="326" width="700" height="530" key="recent.locations.popup/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604654708269" />
-    <state x="456" y="168" key="run.anything.popup" timestamp="1604997039785">
-      <screen x="67" y="0" width="1213" height="720" />
-    </state>
-    <state x="2536" y="280" key="run.anything.popup/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604669306947" />
-    <state x="456" y="168" key="run.anything.popup/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604997039785" />
-    <state x="2543" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1605089578062">
+    <state x="2536" y="280" key="run.anything.popup" timestamp="1606385466284">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state x="2543" y="265" width="672" height="678" key="search.everywhere.popup/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605089578062" />
+    <state x="2536" y="280" key="run.anything.popup/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606385466284" />
+    <state x="2536" y="280" key="run.anything.popup/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604669306947" />
+    <state x="456" y="168" key="run.anything.popup/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604997039785" />
+    <state x="2543" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1606384746361">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2543" y="265" width="672" height="678" key="search.everywhere.popup/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606384746361" />
     <state x="2543" y="265" width="672" height="678" key="search.everywhere.popup/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604658285399" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="TestNG">
+        <watch expression="addToCartButton" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
