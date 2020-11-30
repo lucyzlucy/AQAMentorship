@@ -9,11 +9,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class DriverWrapper {
     protected static final int WAIT_ELEMENT_TIMEOUT = 10;
-    private static WebDriver driver = DriverFactory.getDriver();
+    private static WebDriver driver;
+
+    static {
+        driver = DriverFactory.getDriver();
+    }
 
     public static void killDriverInstance() {
         driver.close();
@@ -26,6 +30,11 @@ public class DriverWrapper {
 
     private static void waitForElementPresent(WebElement element) {
         new WebDriverWait(driver, Duration.ofSeconds(WAIT_ELEMENT_TIMEOUT)).until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public static void waitImplicitly() {
+//        new WebDriverWait(driver, Duration.ofSeconds(WAIT_ELEMENT_TIMEOUT));
+        driver.manage().timeouts().implicitlyWait(WAIT_ELEMENT_TIMEOUT, TimeUnit.SECONDS);
     }
 
     public static boolean isElementLoaded(WebElement element) {

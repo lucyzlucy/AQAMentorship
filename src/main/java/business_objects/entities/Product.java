@@ -2,7 +2,6 @@ package business_objects.entities;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.openqa.selenium.WebElement;
 
 @Getter
 @Setter

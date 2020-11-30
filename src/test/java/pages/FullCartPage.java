@@ -1,11 +1,10 @@
 package pages;
 
-import driver.DriverWrapper;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
-public class FullCartPage extends CartPage {
+public class FullCartPage extends BasePage {
     @FindBy(className = "cart_quantity_delete")
     protected WebElement deleteButton;
 
@@ -28,7 +27,6 @@ public class FullCartPage extends CartPage {
     }
 
     public EmptyCartPage deleteProduct() {
-//        waitForElementPresent(deleteButton);
         deleteButton.click();
         return new EmptyCartPage();
     }

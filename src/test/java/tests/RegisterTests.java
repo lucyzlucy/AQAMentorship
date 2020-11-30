@@ -8,6 +8,7 @@ import pages.SignInPage;
 import utils.CustomAssert;
 
 import static environment.Environment.getEnvProperty;
+import static navigationUtil.PageNavigationUtil.toSignInPage;
 
 public class RegisterTests extends BaseTest {
 
@@ -15,7 +16,7 @@ public class RegisterTests extends BaseTest {
     public void verifyCanRegister() {
         User user = TestData.getNewUser();
 
-        RegisterPage page = new SignInPage()
+        RegisterPage page = toSignInPage()
                 .submitEmailForRegistration(user.getEmail())
                 .submitValidRegistrationInfo(user);
 
@@ -27,7 +28,7 @@ public class RegisterTests extends BaseTest {
 
     @Test
     public void verifyCannotRegisterWithEmptyEmail() {
-        SignInPage page = new SignInPage()
+        SignInPage page = toSignInPage()
                 .submitEmptyEmailForRegistration();
 
         CustomAssert customAssert = new CustomAssert();
@@ -43,7 +44,7 @@ public class RegisterTests extends BaseTest {
     public void verifyCannotRegisterWithExistingEmail() {
         User user = TestData.getExistingUser();
 
-        SignInPage page = new SignInPage()
+        SignInPage page = toSignInPage()
                 .submitExistingEmailForRegistration(user.getEmail());
 
         CustomAssert customAssert = new CustomAssert();
@@ -58,7 +59,7 @@ public class RegisterTests extends BaseTest {
     public void verifyCannotRegisterWithEmptyInfo() {
         User user = TestData.getNewUser();
 
-        RegisterPage page = new SignInPage()
+        RegisterPage page = toSignInPage()
                 .submitEmailForRegistration(user.getEmail())
                 .submitEmptyRegistrationInfo();
 

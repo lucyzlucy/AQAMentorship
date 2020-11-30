@@ -25,7 +25,7 @@ public class SignInPage extends BasePage {
     private WebElement submitCreateButton;
 
     public SignInPage() {
-        navigateToPage(Environment.getEnvProperty("signInPageUrl"));
+//        navigateToPage(Environment.getEnvProperty("signInPageUrl"));
         waitForPageToLoad(submitSignInButton);
     }
 

@@ -11,16 +11,18 @@ import pages.SignInPage;
 import utils.CustomAssert;
 
 import static environment.Environment.getEnvProperty;
+import static navigationUtil.PageNavigationUtil.toMainPage;
+import static navigationUtil.PageNavigationUtil.toSignInPage;
 
 public class LoginTests extends BaseTest {
 
     @Test
     public void verifyCanNavigateToSignInPageFromMain() {
-        SignInPage page = new CataloguePage()
+        SignInPage page = toMainPage()
                 .navigateToSignInPage();
 
         CustomAssert custAssert = new CustomAssert();
-        custAssert.assertTrue(page.getUrl().contains(getEnvProperty("signInPageUrl")), "SIGNIN_PAGE_URL is opened");
+        custAssert.assertTrue(page.getUrl().contains(getEnvProperty("signInPageUrl")), "SIGNIN_PAGE_URL is opened"+page.getUrl());
         custAssert.assertAll();
     }
 
@@ -28,7 +30,7 @@ public class LoginTests extends BaseTest {
     public void verifyCanSignInWithValidCredentials() {
         User user = TestData.getExistingUser();
 
-        SignInPage page = new SignInPage()
+        SignInPage page = toSignInPage()
                 .submitCredentials(user);
 
         CustomAssert custAssert = new CustomAssert();
@@ -39,7 +41,7 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void verifyCannotSubmitEmptyFields() {
-        SignInPage page = new SignInPage()
+        SignInPage page = toSignInPage()
                 .submitEmptyCredentials();
 
         CustomAssert customAssert = new CustomAssert();
@@ -53,7 +55,7 @@ public class LoginTests extends BaseTest {
     @Test(dataProviderClass = TestDataProvider.class, dataProvider = "invalidEmails")
     public void verifyCannotLoginWithInvalidEmail(User invalidEmailUser) {
 
-        SignInPage page = new SignInPage()
+        SignInPage page =  toSignInPage()
                 .submitCredentials(invalidEmailUser);
 
         CustomAssert customAssert = new CustomAssert();
@@ -66,7 +68,7 @@ public class LoginTests extends BaseTest {
 
     @Test(dataProviderClass = TestDataProvider.class, dataProvider = "invalidPasswords")
     public void verifyCannotLoginWithInvalidPassword(User invalidPassUser) {
-        SignInPage page = new SignInPage()
+        SignInPage page = toSignInPage()
                 .submitCredentials(invalidPassUser);
 
         CustomAssert customAssert = new CustomAssert();
@@ -81,7 +83,7 @@ public class LoginTests extends BaseTest {
     public void verifyCanLogout() {
         User user = TestData.getExistingUser();
 
-        BasePage page = new SignInPage()
+        BasePage page = toSignInPage()
                 .submitCredentials(user)
                 .clickOnSignOut();
 
