@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4246cf7-c8d2-4438-87a5-6b6e4613685d" name="Default Changelist" comment="&quot;Removed env from tests. Refactored product in Catalogue page&quot;">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="c4246cf7-c8d2-4438-87a5-6b6e4613685d" name="Default Changelist" comment="&quot;Created&quot;">
+      <change afterPath="$PROJECT_DIR$/src/main/java/business_objects/entities/ProductsInCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/driver/elements/WebTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business_objects/builders/ProductBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business_objects/builders/ProductBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/business_objects/entities/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business_objects/entities/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business_objects/factory/UserFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business_objects/factory/UserFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/CryptedPass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/CryptedPass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data/TestData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data/TestData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/driver/DriverFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/driver/DriverFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business_objects/factory/UserFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data/CryptedPass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data/TestData.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/driver/DriverWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/driver/DriverWrapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/driver/IWebDriver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/environment/Environment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/environment/Environment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/environment/Environment1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/dataProvider/TestDataProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dataProvider/TestDataProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/dataProvider/TestDataProvider.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/environment.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/environment.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/CataloguePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/CataloguePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/CartPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/EmptyCartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/EmptyCartPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pages/FullCartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/FullCartPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pages/SignInPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/SignInPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/CartTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/CartTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/LoginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/LoginTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/tests/RegisterTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/RegisterTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/TestSample.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +70,7 @@
       <recent name="driver" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginTests.verifyCannotLoginWithInvalidEmail">
+  <component name="RunManager" selected="TestNG.CartTests.verifyDeletingProductsFromCart">
     <configuration name="CartTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQAMentorshipEPAM" />
       <extension name="coverage">
@@ -104,7 +97,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartTests.verifyConfirmationPopupWithProductDetailsIsShown" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CartTests.verifyDeletingProductsFromCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQAMentorshipEPAM" />
       <extension name="coverage">
         <pattern>
@@ -115,7 +108,34 @@
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.CartTests" />
-      <option name="METHOD_NAME" value="verifyConfirmationPopupWithProductDetailsIsShown" />
+      <option name="METHOD_NAME" value="verifyDeletingProductsFromCart" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CartTests.verifyProductDetailsInCart" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQAMentorshipEPAM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CartTests" />
+      <option name="METHOD_NAME" value="verifyProductDetailsInCart" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
@@ -185,33 +205,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTests.verifyCannotLoginWithInvalidPassword" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQAMentorshipEPAM" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTests" />
-      <option name="METHOD_NAME" value="verifyCannotLoginWithInvalidPassword" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG">
       <option name="SUITE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -232,18 +225,18 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.LoginTests.verifyCanNavigateToSignInPageFromMain" />
-      <item itemvalue="TestNG.CartTests.verifyConfirmationPopupWithProductDetailsIsShown" />
-      <item itemvalue="TestNG.CartTests" />
-      <item itemvalue="TestNG.LoginTests.verifyCannotLoginWithInvalidPassword" />
       <item itemvalue="TestNG.LoginTests.verifyCannotLoginWithInvalidEmail" />
+      <item itemvalue="TestNG.CartTests.verifyDeletingProductsFromCart" />
+      <item itemvalue="TestNG.CartTests.verifyProductDetailsInCart" />
+      <item itemvalue="TestNG.CartTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginTests.verifyCannotLoginWithInvalidEmail" />
-        <item itemvalue="TestNG.LoginTests.verifyCannotLoginWithInvalidPassword" />
-        <item itemvalue="TestNG.LoginTests.verifyCanNavigateToSignInPageFromMain" />
+        <item itemvalue="TestNG.CartTests.verifyDeletingProductsFromCart" />
         <item itemvalue="TestNG.CartTests" />
-        <item itemvalue="TestNG.CartTests.verifyConfirmationPopupWithProductDetailsIsShown" />
+        <item itemvalue="TestNG.CartTests.verifyProductDetailsInCart" />
+        <item itemvalue="TestNG.LoginTests.verifyCanNavigateToSignInPageFromMain" />
+        <item itemvalue="TestNG.LoginTests.verifyCannotLoginWithInvalidEmail" />
       </list>
     </recent_temporary>
   </component>
@@ -319,7 +312,28 @@
       <option name="project" value="LOCAL" />
       <updated>1606664550196</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="&quot;Refactor&quot;">
+      <created>1606664788168</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1606664788168</updated>
+    </task>
+    <task id="LOCAL-00009" summary="&quot;Added PageNavigationUtil&quot;">
+      <created>1606732966142</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1606732966142</updated>
+    </task>
+    <task id="LOCAL-00010" summary="&quot;Added equals and hashcode methods to Product. Added total sum and quantity&quot;">
+      <created>1606812663510</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1606812663510</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -330,7 +344,10 @@
     <MESSAGE value="&quot;Refactored env2&quot;" />
     <MESSAGE value="&quot;Added Json Util and TestData methods to work with it&quot;" />
     <MESSAGE value="&quot;Moved data to test folder&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Moved data to test folder&quot;" />
+    <MESSAGE value="&quot;Refactor&quot;" />
+    <MESSAGE value="&quot;Added PageNavigationUtil&quot;" />
+    <MESSAGE value="&quot;Added equals and hashcode methods to Product. Added total sum and quantity&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Added equals and hashcode methods to Product. Added total sum and quantity&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="266" y="20" key="#Project_Structure" timestamp="1604995562346">
@@ -348,10 +365,11 @@
     <state x="2067" y="155" width="1626" height="892" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605090580742" />
     <state x="156" y="93" width="1031" height="536" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/63.0.1217.720/1920.0.1920.1200@63.0.1217.720" timestamp="1605174288512" />
     <state x="160" y="93" width="1027" height="535" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604497455436" />
-    <state x="2685" y="317" key="#com.intellij.ide.util.MemberChooser" timestamp="1605187477630">
-      <screen x="1920" y="0" width="1920" height="1200" />
+    <state x="550" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1606808289205">
+      <screen x="67" y="0" width="1213" height="720" />
     </state>
     <state x="2685" y="317" key="#com.intellij.ide.util.MemberChooser/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605187477630" />
+    <state x="550" y="142" key="#com.intellij.ide.util.MemberChooser/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1606808289205" />
     <state x="2313" y="478" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1606664437834">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
@@ -361,72 +379,81 @@
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
     <state x="2605" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604568530284" />
+    <state x="2610" y="348" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606721965355">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2610" y="348" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606721965355" />
     <state x="2610" y="348" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1605090279012">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
     <state x="2610" y="348" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605090279012" />
-    <state x="2455" y="195" key="CommitChangelistDialog2" timestamp="1606664708037">
+    <state x="405" y="0" key="CommitChangelistDialog2" timestamp="1606812690766">
+      <screen x="67" y="0" width="1213" height="720" />
+    </state>
+    <state x="2455" y="195" key="CommitChangelistDialog2/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606732964185" />
+    <state x="405" y="0" key="CommitChangelistDialog2/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1606812690766" />
+    <state x="296" y="60" key="DiffContextDialog" timestamp="1606812629807">
+      <screen x="67" y="0" width="1213" height="720" />
+    </state>
+    <state x="296" y="60" key="DiffContextDialog/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1606812629807" />
+    <state width="1877" height="354" key="GridCell.Tab.0.bottom" timestamp="1606734842450">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state x="2455" y="195" key="CommitChangelistDialog2/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606664708037" />
-    <state width="1877" height="444" key="GridCell.Tab.0.bottom" timestamp="1606395330675">
-      <screen x="1920" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1877" height="444" key="GridCell.Tab.0.bottom/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606395330675" />
+    <state width="1877" height="354" key="GridCell.Tab.0.bottom/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606734842450" />
     <state width="1173" height="168" key="GridCell.Tab.0.bottom/63.0.1217.720/1920.0.1920.1200@63.0.1217.720" timestamp="1605174818425" />
     <state width="1877" height="460" key="GridCell.Tab.0.bottom/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416669" />
     <state width="1877" height="437" key="GridCell.Tab.0.bottom/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604934132157" />
     <state width="1169" height="235" key="GridCell.Tab.0.bottom/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604930032871" />
     <state width="1154" height="418" key="GridCell.Tab.0.bottom/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
-    <state width="1877" height="444" key="GridCell.Tab.0.center" timestamp="1606395330675">
+    <state width="1877" height="354" key="GridCell.Tab.0.center" timestamp="1606734842450">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="444" key="GridCell.Tab.0.center/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606395330675" />
+    <state width="1877" height="354" key="GridCell.Tab.0.center/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606734842450" />
     <state width="1173" height="168" key="GridCell.Tab.0.center/63.0.1217.720/1920.0.1920.1200@63.0.1217.720" timestamp="1605174818425" />
     <state width="1877" height="460" key="GridCell.Tab.0.center/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416669" />
     <state width="1877" height="437" key="GridCell.Tab.0.center/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604934132156" />
     <state width="1169" height="235" key="GridCell.Tab.0.center/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604930032870" />
     <state width="1154" height="418" key="GridCell.Tab.0.center/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
-    <state width="1877" height="444" key="GridCell.Tab.0.left" timestamp="1606395330675">
+    <state width="1877" height="354" key="GridCell.Tab.0.left" timestamp="1606734842449">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="444" key="GridCell.Tab.0.left/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606395330675" />
+    <state width="1877" height="354" key="GridCell.Tab.0.left/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606734842449" />
     <state width="1173" height="168" key="GridCell.Tab.0.left/63.0.1217.720/1920.0.1920.1200@63.0.1217.720" timestamp="1605174818425" />
     <state width="1877" height="460" key="GridCell.Tab.0.left/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416668" />
     <state width="1877" height="437" key="GridCell.Tab.0.left/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604934132156" />
     <state width="1169" height="235" key="GridCell.Tab.0.left/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604930032870" />
     <state width="1154" height="418" key="GridCell.Tab.0.left/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
-    <state width="1877" height="444" key="GridCell.Tab.0.right" timestamp="1606395330675">
+    <state width="1877" height="354" key="GridCell.Tab.0.right" timestamp="1606734842450">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="444" key="GridCell.Tab.0.right/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606395330675" />
+    <state width="1877" height="354" key="GridCell.Tab.0.right/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606734842450" />
     <state width="1173" height="168" key="GridCell.Tab.0.right/63.0.1217.720/1920.0.1920.1200@63.0.1217.720" timestamp="1605174818425" />
     <state width="1877" height="460" key="GridCell.Tab.0.right/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416669" />
     <state width="1877" height="437" key="GridCell.Tab.0.right/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604934132157" />
     <state width="1169" height="235" key="GridCell.Tab.0.right/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604930032871" />
     <state width="1154" height="418" key="GridCell.Tab.0.right/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
-    <state width="1877" height="460" key="GridCell.Tab.1.bottom" timestamp="1606307917303">
+    <state width="1877" height="354" key="GridCell.Tab.1.bottom" timestamp="1606734842450">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="460" key="GridCell.Tab.1.bottom/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606307917303" />
+    <state width="1877" height="354" key="GridCell.Tab.1.bottom/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606734842450" />
     <state width="1877" height="460" key="GridCell.Tab.1.bottom/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416670" />
     <state width="1877" height="412" key="GridCell.Tab.1.bottom/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604677166253" />
-    <state width="1877" height="460" key="GridCell.Tab.1.center" timestamp="1606307917303">
+    <state width="1877" height="354" key="GridCell.Tab.1.center" timestamp="1606734842450">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="460" key="GridCell.Tab.1.center/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606307917303" />
+    <state width="1877" height="354" key="GridCell.Tab.1.center/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606734842450" />
     <state width="1877" height="460" key="GridCell.Tab.1.center/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416670" />
     <state width="1877" height="412" key="GridCell.Tab.1.center/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604677166253" />
-    <state width="1877" height="460" key="GridCell.Tab.1.left" timestamp="1606307917303">
+    <state width="1877" height="354" key="GridCell.Tab.1.left" timestamp="1606734842450">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="460" key="GridCell.Tab.1.left/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606307917303" />
+    <state width="1877" height="354" key="GridCell.Tab.1.left/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606734842450" />
     <state width="1877" height="460" key="GridCell.Tab.1.left/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416669" />
     <state width="1877" height="412" key="GridCell.Tab.1.left/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604677166253" />
-    <state width="1877" height="460" key="GridCell.Tab.1.right" timestamp="1606307917303">
+    <state width="1877" height="354" key="GridCell.Tab.1.right" timestamp="1606734842450">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
-    <state width="1877" height="460" key="GridCell.Tab.1.right/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606307917303" />
+    <state width="1877" height="354" key="GridCell.Tab.1.right/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606734842450" />
     <state width="1877" height="460" key="GridCell.Tab.1.right/64.0.1216.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605867416670" />
     <state width="1877" height="412" key="GridCell.Tab.1.right/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604677166253" />
     <state x="2137" y="28" key="Maven.ArtifactSearchDialog" timestamp="1605098742034">
@@ -439,10 +466,11 @@
     </state>
     <state x="2091" y="7" key="SettingsEditor/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605087592770" />
     <state x="175" y="4" key="SettingsEditor/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604489190007" />
-    <state x="2472" y="322" key="Vcs.Push.Dialog.v2" timestamp="1606664553341">
-      <screen x="1920" y="0" width="1920" height="1200" />
+    <state x="416" y="166" key="Vcs.Push.Dialog.v2" timestamp="1606812665338">
+      <screen x="67" y="0" width="1213" height="720" />
     </state>
-    <state x="2472" y="322" key="Vcs.Push.Dialog.v2/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606664553341" />
+    <state x="2472" y="322" key="Vcs.Push.Dialog.v2/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606734670702" />
+    <state x="416" y="166" key="Vcs.Push.Dialog.v2/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1606812665338" />
     <state x="2894" y="444" key="com.intellij.ide.util.TipDialog" timestamp="1606378929141">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
@@ -471,11 +499,12 @@
     <state x="2536" y="280" key="run.anything.popup/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606385466284" />
     <state x="2536" y="280" key="run.anything.popup/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604669306947" />
     <state x="456" y="168" key="run.anything.popup/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604997039785" />
-    <state x="2543" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1606384746361">
-      <screen x="1920" y="0" width="1920" height="1200" />
+    <state x="461" y="159" width="672" height="407" key="search.everywhere.popup" timestamp="1606811785766">
+      <screen x="67" y="0" width="1213" height="720" />
     </state>
     <state x="2543" y="265" width="672" height="678" key="search.everywhere.popup/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606384746361" />
     <state x="2543" y="265" width="672" height="678" key="search.everywhere.popup/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604658285399" />
+    <state x="461" y="159" width="672" height="407" key="search.everywhere.popup/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1606811785766" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
