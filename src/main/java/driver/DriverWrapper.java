@@ -1,5 +1,6 @@
 package driver;
 
+import driver.elements.FieldDecorator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -55,7 +56,7 @@ public class DriverWrapper {
     }
 
     public static void initElements(Object page) {
-        PageFactory.initElements(driver, page);
+        PageFactory.initElements(new FieldDecorator(driver), page);
     }
 
 
