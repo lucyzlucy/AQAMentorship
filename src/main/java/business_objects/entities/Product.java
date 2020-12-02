@@ -11,7 +11,7 @@ public class Product {
     private String name;
     private double price;
     private int quantity = 1;
-    private double totalPrice;
+    private double totalPrice = price * quantity;
 
     public void setQuantity(int q){
         this.quantity = q;

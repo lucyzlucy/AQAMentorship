@@ -16,7 +16,7 @@ public class ProductBuilder {
         return this;
     }
 
-    public ProductBuilder setPrice(String price) {
+    public ProductBuilder setPrice(double price) {
         product.setPrice(price);
         return this;
     }
