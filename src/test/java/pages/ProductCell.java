@@ -5,14 +5,19 @@ import business_objects.entities.Product;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import static utils.StripNonDigitsUtil.stripNonDigits;
+
 public class ProductCell extends BasePage {
     WebElement productElement;
     WebElement addToCartButton;
+    WebElement productName;
+    WebElement productPrice;
 
     public ProductCell(WebElement productElement) {
         this.productElement = productElement;
         addToCartButton = productElement.findElement(By.className("ajax_add_to_cart_button"));
-//        waitForPageToLoad(productElement);
+        productName = productElement.findElement(By.className("product-name"));
+        productPrice = productElement.findElement(By.xpath(".//div[2]//*[@class='content_price'][1]/span[1]"));
     }
 
     public ProductCell addProductToCart() {
@@ -22,10 +27,14 @@ public class ProductCell extends BasePage {
     }
 
     public Product getProduct() {
+        return new ProductBuilder().setName(getProductName()).setPrice(getProductPrice()).make();
+    }
 
-        String productName = productElement.findElement(By.className("product-name")).getText();
-        String productPrice = getVisibleElement(productElement.findElements(By.className("price"))).getText();
+    public double getProductPrice() {
+        return Double.parseDouble(stripNonDigits(productPrice.getText()));
+    }
 
-        return new ProductBuilder().setName(productName).setPrice(productPrice).make();
+    public String getProductName() {
+        return productName.getText();
     }
 }

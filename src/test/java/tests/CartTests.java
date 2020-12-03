@@ -1,6 +1,7 @@
 package tests;
 
 import business_objects.entities.Product;
+import business_objects.entities.ProductsInCart;
 import driver.DriverWrapper;
 import lombok.SneakyThrows;
 import org.testng.Assert;
@@ -18,6 +19,7 @@ import static navigationUtil.PageNavigationUtil.*;
 public class CartTests extends BaseTest {
     CataloguePage page;
     Product product;
+
 
     @BeforeMethod
     public void addProductToCart() {
@@ -39,7 +41,6 @@ public class CartTests extends BaseTest {
         page.closePopup();
 
         FullCartPage cartPage = toFullCartPage();
-
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(cartPage.getCartProductName(), product.getName(), "Correct name is shown");
         softAssert.assertEquals(cartPage.getCartProductPrice(), product.getPrice(), "Correct price is shown");
@@ -49,9 +50,9 @@ public class CartTests extends BaseTest {
     @Test
     @SneakyThrows
     public void verifyDeletingProductsFromCart() {
-        DriverWrapper.waitImplicitly();
+//        DriverWrapper.waitImplicitly();
 
-//        page.closePopup();
+        page.closePopup();
 //        Thread.sleep(1000);
         EmptyCartPage cartPage = toFullCartPage().deleteProduct();
         Assert.assertTrue(cartPage.getErrorMessage().contains(getEnvProperty("emptyCartMessage")), "Correct message about empty cart is shown");

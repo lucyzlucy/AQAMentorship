@@ -1,17 +1,14 @@
 package pages;
 
-import business_objects.builders.ProductBuilder;
-import business_objects.entities.Product;
-import driver.DriverWrapper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.springframework.context.annotation.DependsOn;
 
 import java.util.List;
 
 import static driver.DriverWrapper.isElementLoaded;
-import static utils.Randomizer.getRandomIntWithinSize;
+import static utils.Randomizer.getRandomInt;
+import static utils.StripNonDigitsUtil.stripNonDigits;
 
 public class CataloguePage extends BasePage {
 
@@ -27,9 +24,6 @@ public class CataloguePage extends BasePage {
     @FindBy(id = "layer_cart_product_price")
     protected WebElement productPrice;
 
-    @FindBy(id = "layer_cart_product_quantity")
-    protected WebElement productQuantity;
-
     @FindBy(xpath = "//h2[child::i]")
     protected WebElement successMessage;
 
@@ -43,12 +37,12 @@ public class CataloguePage extends BasePage {
 
     public CataloguePage clickOnRandomCatalogueSection() {
         List<WebElement> children = catalogueMenu.findElements(By.xpath("./li"));
-        children.get(getRandomIntWithinSize(children.size())).click();
+        children.get(getRandomInt(children.size())).click();
         return this;
     }
 
     public ProductCell chooseRandomProduct() {
-        WebElement productElement = productList.get(getRandomIntWithinSize(productList.size()));
+        WebElement productElement = productList.get(getRandomInt(productList.size()));
         return new ProductCell(productElement);
     }
 
@@ -61,12 +55,8 @@ public class CataloguePage extends BasePage {
         return productName.getText();
     }
 
-    public String getProductPrice() {
-        return productPrice.getText();
-    }
-
-    public int getProductQuantity() {
-        return Integer.parseInt(productName.getText());
+    public double getProductPrice() {
+        return Double.parseDouble(stripNonDigits(productPrice.getText()));
     }
 
     public FullCartPage clickOnCart() {

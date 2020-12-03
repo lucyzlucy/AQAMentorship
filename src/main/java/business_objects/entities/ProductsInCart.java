@@ -1,16 +1,14 @@
 package business_objects.entities;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class ProductsInCart {
     List<Product> products = new ArrayList<>();
 
     public void addProduct(Product product) {
         for (Product p : products) {
-            if (p.getName().equals(product.getName())) {
+            if (p.getName().equals(product.getName())&&p.getPrice()==(product.getPrice())) {
                 p.setQuantity(p.getQuantity() + product.getQuantity());
                 return;
             }
@@ -23,7 +21,7 @@ public class ProductsInCart {
         for (Product product : products) {
             sum += product.getTotalPrice();
         }
-        return sum;
+        return Math.round(sum* 100.0) / 100.0;
     }
 
     public int getProductsNumber() {
@@ -32,6 +30,12 @@ public class ProductsInCart {
 
     public boolean isProductInList(Product product) {
         return products.contains(product);
+    }
+
+    public void printProductsInCart() {
+        for (Product product : products) {
+            System.out.println(product.toString());
+        }
     }
 
 }

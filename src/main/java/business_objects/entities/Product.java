@@ -11,7 +11,12 @@ public class Product {
     private String name;
     private double price;
     private int quantity = 1;
-    private double totalPrice = price * quantity;
+    private double totalPrice;
+
+    public void setPrice(double p){
+        this.price = p;
+        totalPrice = price * quantity;
+    }
 
     public void setQuantity(int q){
         this.quantity = q;
@@ -35,5 +40,15 @@ public class Product {
     @Override
     public int hashCode() {
         return Objects.hash(name, price, quantity, totalPrice);
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", totalPrice=" + totalPrice +
+                '}';
     }
 }
