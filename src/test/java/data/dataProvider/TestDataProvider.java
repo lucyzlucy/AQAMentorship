@@ -6,7 +6,7 @@ import utils.ArrayUtil;
 
 public class TestDataProvider {
 
-    @DataProvider
+    @DataProvider(name = "invalid_emails")
     public static Object[][] invalidEmails() {
         return ArrayUtil.buildATwoDimensionalArray(TestData.getUsersWithInvalidEmails());
     }

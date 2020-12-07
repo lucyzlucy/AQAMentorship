@@ -5,6 +5,7 @@ import business_objects.entities.Product;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import static driver.DriverWrapper.waitImplicitly;
 import static utils.StripNonDigitsUtil.stripNonDigits;
 
 public class ProductCell extends BasePage {
@@ -20,10 +21,10 @@ public class ProductCell extends BasePage {
         productPrice = productElement.findElement(By.xpath(".//div[2]//*[@class='content_price'][1]/span[1]"));
     }
 
-    public ProductCell addProductToCart() {
-        productElement.click();
+    public ProductAddedPopup addProductToCart() {
         addToCartButton.click();
-        return this;
+        waitImplicitly(1000);
+        return new ProductAddedPopup();
     }
 
     public Product getProduct() {
@@ -36,5 +37,10 @@ public class ProductCell extends BasePage {
 
     public String getProductName() {
         return productName.getText();
+    }
+
+    public ProductPage clickOnProductName() {
+        productName.click();
+        return new ProductPage();
     }
 }

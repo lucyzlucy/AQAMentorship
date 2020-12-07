@@ -1,21 +1,25 @@
 package pages;
 
-import business_objects.entities.Product;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import static driver.DriverWrapper.isElementLoaded;
 import static utils.StripNonDigitsUtil.stripNonDigits;
 
-public class ProductPage extends BasePage{
-
-    @FindBy(xpath = "//*[@itemprop='name']")
+public class ProductAddedPopup extends BasePage{
+    @FindBy(id = "layer_cart_product_title")
     protected WebElement productName;
 
-    @FindBy(id = "our_price_display")
+    @FindBy(id = "layer_cart_product_price")
     protected WebElement productPrice;
 
-    @FindBy(id = "quantity_wanted")
-    protected WebElement quantity;
+    @FindBy(xpath = "//h2[child::i]")
+    protected WebElement successMessage;
+
+    public String getMessage() {
+        isElementLoaded(successMessage);
+        return successMessage.getText();
+    }
 
     public String getProductName() {
         return productName.getText();
@@ -24,6 +28,4 @@ public class ProductPage extends BasePage{
     public double getProductPrice() {
         return Double.parseDouble(stripNonDigits(productPrice.getText()));
     }
-
-
 }

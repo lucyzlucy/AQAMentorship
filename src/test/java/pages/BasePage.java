@@ -27,6 +27,9 @@ public class BasePage {
     @FindBy(className = "cross")
     protected WebElement closeButton;
 
+    @FindBy(xpath = "//div[@class='shopping_cart']/a")
+    protected WebElement cartButton;
+
     public BasePage() {
         DriverWrapper.initElements(this);
     }
@@ -61,16 +64,10 @@ public class BasePage {
 
     public String getErrorMessage() {
         return alertBlock.getText();
-//        }
     }
 
-    protected WebElement getVisibleElement(List<WebElement> elements) {
-        for (WebElement element : elements) {
-            if (element.isDisplayed()) {
-                return element;
-            }
-        }
-        return null;
+    public void refreshPage() {
+        DriverWrapper.refresh();
     }
 
     public boolean loggedUserHeaderIsShown() {
@@ -80,6 +77,12 @@ public class BasePage {
     public boolean unloggedUserHeaderIsShown() {
         return isElementLoaded(signinNavigationButton);
     }
+
+    public FullCartPage clickOnCart() {
+        cartButton.click();
+        return new FullCartPage();
+    }
+
 
 }
 

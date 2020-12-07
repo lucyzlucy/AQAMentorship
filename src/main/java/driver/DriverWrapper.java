@@ -1,6 +1,7 @@
 package driver;
 
 import driver.elements.FieldDecorator;
+import lombok.SneakyThrows;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -33,9 +34,12 @@ public class DriverWrapper {
         new WebDriverWait(driver, Duration.ofSeconds(WAIT_ELEMENT_TIMEOUT)).until(ExpectedConditions.visibilityOf(element));
     }
 
-    public static void waitImplicitly() {
-//        new WebDriverWait(driver, Duration.ofSeconds(WAIT_ELEMENT_TIMEOUT));
-        driver.manage().timeouts().implicitlyWait(WAIT_ELEMENT_TIMEOUT, TimeUnit.SECONDS);
+    public static void waitImplicitly(int milliseconds) {
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public static boolean isElementLoaded(WebElement element) {
@@ -57,6 +61,10 @@ public class DriverWrapper {
 
     public static void initElements(Object page) {
         PageFactory.initElements(new FieldDecorator(driver), page);
+    }
+
+    public static void refresh() {
+        driver.navigate().refresh();
     }
 
 

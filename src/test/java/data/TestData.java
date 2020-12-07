@@ -10,7 +10,7 @@ import static data.CryptedPass.getDecodedPass;
 import static utils.StringGeneratorUtils.getRandomPassword;
 
 public class TestData {
-    private static final String TEST_DATA_JSON_PATH = "src/test/resources/test_data.json";
+    private static final String TEST_DATA_JSON_PATH = "src/test/resources/user_test_data.json";
 
     public static User getNewUser() {
         return new UserBuilder().setEmail(StringGeneratorUtils.getRandomEmail())
