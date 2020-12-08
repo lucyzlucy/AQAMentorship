@@ -26,8 +26,4 @@ public class ProductBuilder {
         return this;
     }
 
-    public ProductBuilder setTotalPrice(double tPrice) {
-        product.setTotalPrice(tPrice);
-        return this;
-    }
 }

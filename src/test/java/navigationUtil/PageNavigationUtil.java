@@ -26,4 +26,9 @@ public class PageNavigationUtil {
         DriverWrapper.navigateToPage(getEnvProperty("cartPageUrl"));
         return new FullCartPage();
     }
+
+    public static ProductPage toDiscountedProductPage() {
+        DriverWrapper.navigateToPage(getEnvProperty("discountedProductPageUrl"));
+        return new ProductPage();
+    }
 }

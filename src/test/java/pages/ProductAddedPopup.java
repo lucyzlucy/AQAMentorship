@@ -13,6 +13,15 @@ public class ProductAddedPopup extends BasePage{
     @FindBy(id = "layer_cart_product_price")
     protected WebElement productPrice;
 
+    @FindBy(id = "layer_cart_product_quantity")
+    protected WebElement productQty;
+
+    @FindBy(className = "ajax_block_products_total")
+    protected WebElement cartProductTotalPrice;
+
+    @FindBy(className = "ajax_cart_quantity")
+    protected WebElement cartQty;
+
     @FindBy(xpath = "//h2[child::i]")
     protected WebElement successMessage;
 
@@ -28,4 +37,18 @@ public class ProductAddedPopup extends BasePage{
     public double getProductPrice() {
         return Double.parseDouble(stripNonDigits(productPrice.getText()));
     }
+
+    public double getCartProductTotalPrice() {
+        return Double.parseDouble(stripNonDigits(cartProductTotalPrice.getText()));
+    }
+
+    public int getProductQty() {
+        return Integer.parseInt(productQty.getText());
+    }
+
+    public int getCartQty() {
+        return Integer.parseInt(cartQty.getText());
+    }
+
+
 }

@@ -45,7 +45,6 @@ public class FullCartPage extends BasePage {
                 .setName(productName)
                 .setPrice(productPrice)
                 .setQuantity(productQuantity)
-                .setTotalPrice(productTotalPrice)
                 .make();
 
         return product;

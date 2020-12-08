@@ -13,14 +13,18 @@ public class Product {
     private int quantity = 1;
     private double totalPrice;
 
-    public void setPrice(double p){
+    public void setPrice(double p) {
         this.price = p;
-        totalPrice = price * quantity;
+        setTotalPrice();
     }
 
-    public void setQuantity(int q){
+    private void setTotalPrice() {
+        totalPrice =  Math.round((price * quantity) * 100.0) / 100.0;
+    }
+
+    public void setQuantity(int q) {
         this.quantity = q;
-        totalPrice = price * quantity;
+        setTotalPrice();
     }
 
     @Override
