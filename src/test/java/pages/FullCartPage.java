@@ -83,4 +83,14 @@ public class FullCartPage extends BasePage {
     public int getProductsInCartNumber() {
         return cartTable.getRowCount();
     }
+
+    public String getProductsInCart() {
+        StringBuilder products = new StringBuilder();
+        for (int i = 1; i <= getProductsInCartNumber(); i++) {
+            products.append(getCartProduct(i).toString());
+            products.append("\n");
+
+        }
+        return products.toString();
+    }
 }

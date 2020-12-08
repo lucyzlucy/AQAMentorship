@@ -6,14 +6,15 @@ import java.util.List;
 public class ProductsInCart {
     List<Product> products = new ArrayList<>();
 
-    public void addProduct(Product product) {
+    public ProductsInCart addProduct(Product product) {
         for (Product p : products) {
-            if (p.getName().equals(product.getName())&&p.getPrice()==(product.getPrice())) {
+            if (p.getName().equals(product.getName()) && p.getPrice() == (product.getPrice())) {
                 p.setQuantity(p.getQuantity() + product.getQuantity());
-                return;
+                return this;
             }
         }
         products.add(product);
+        return this;
     }
 
     public double getTotalPrice() {
@@ -21,7 +22,7 @@ public class ProductsInCart {
         for (Product product : products) {
             sum += product.getTotalPrice();
         }
-        return Math.round(sum* 100.0) / 100.0;
+        return Math.round(sum * 100.0) / 100.0;
     }
 
     public int getProductsNumber() {
@@ -32,10 +33,15 @@ public class ProductsInCart {
         return products.contains(product);
     }
 
-    public void printProductsInCart() {
+    public String getPrintableProductsInCart() {
+        StringBuilder productsPrintable = new StringBuilder();
+
         for (Product product : products) {
-            System.out.println(product.toString());
+            productsPrintable.append(product.toString());
+            productsPrintable.append("\n");
         }
+
+        return productsPrintable.toString();
     }
 
 }
