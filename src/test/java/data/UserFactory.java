@@ -9,7 +9,7 @@ import utils.StringGeneratorUtils;
 import static data.CryptedPass.getDecodedPass;
 import static utils.StringGeneratorUtils.getRandomPassword;
 
-public class TestData {
+public class UserFactory {
     private static final String TEST_DATA_JSON_PATH = "src/test/resources/user_test_data.json";
 
     public static User getNewUser() {
@@ -49,6 +49,14 @@ public class TestData {
             usersWithInvalidPasswords[i] = new UserBuilder().setEmail(validEmail).setPassword(invalidPasswords[i]).make();
         }
         return usersWithInvalidPasswords;
+    }
+
+    public static User getUserWithGivenEmail(String invalidEmail) {
+        return new UserBuilder().setEmail(invalidEmail).setPassword(getRandomPassword()).make();
+    }
+
+    public static User getUserWithGivenPass(String invalidPass) {
+        return new UserBuilder().setEmail(StringGeneratorUtils.getRandomEmail()).setPassword(invalidPass).make();
     }
 
 

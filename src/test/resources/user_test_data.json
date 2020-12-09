@@ -7,6 +7,5 @@
   "invalid_passwords": [
     "abcd",
     "1234"
-  ],
-  "valid_pass": "123456"
+  ]
 }
