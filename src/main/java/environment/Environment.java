@@ -1,5 +1,7 @@
 package environment;
 
+import exceptions.NoEnvValueException;
+import lombok.SneakyThrows;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
 
@@ -15,8 +17,15 @@ public class Environment {
         }
     }
 
+    @SneakyThrows
     public static String getEnvProperty(String key) {
-        return applicationProps.getString(key);
+        System.out.println("HERE");
+        if (applicationProps.getString(key) == null) {
+            throw new NoEnvValueException(key);
+        }
+        else {
+            return applicationProps.getString(key);
+        }
     }
 
     public static void setEnvProperty(String key, String value) {
