@@ -29,6 +29,16 @@ public class ProductsInCart {
         return products.size();
     }
 
+    public int getQuantity() {
+
+        int qty = 0;
+        for (Product product : products) {
+            qty += product.getQuantity();
+        }
+        return qty;
+    }
+
+
     public boolean isProductInList(Product product) {
         return products.contains(product);
     }

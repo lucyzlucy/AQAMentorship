@@ -7,13 +7,17 @@ import testng.listeners.TestListener;
 @Listeners({TestListener.class})
 public class BaseTest {
 
+    @BeforeSuite
+    public void setUp() {
+        DriverWrapper.initDriver();
+    }
+
     @AfterMethod
     public void tearDown() {
         DriverWrapper.clearBrowserCookies();
     }
 
-
-    @AfterClass
+    @AfterSuite
     public void close() {
         DriverWrapper.killDriverInstance();
     }

@@ -36,4 +36,9 @@ public class PageNavigationUtil {
         DriverWrapper.navigateToPage(getEnvProperty("regularProductPageUrl"));
         return new ProductPage();
     }
+
+    public static ProductPage toRegularProductPage2() {
+        DriverWrapper.navigateToPage(getEnvProperty("regularProductPageUrl2"));
+        return new ProductPage();
+    }
 }

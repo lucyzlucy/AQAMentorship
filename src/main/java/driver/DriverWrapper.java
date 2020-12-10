@@ -17,8 +17,10 @@ public class DriverWrapper {
     protected static final int WAIT_ELEMENT_TIMEOUT = 10;
     private static WebDriver driver;
 
-    static {
-        driver = DriverFactory.getDriver();
+    public static void initDriver() {
+        if (driver == null) {
+            driver = DriverFactory.getDriver();
+        }
     }
 
     public static void killDriverInstance() {

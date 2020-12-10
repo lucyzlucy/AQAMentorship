@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Adding to cart tests">
+    <test name="Adding single product to cart">
+        <parameter name="product" value="singleProduct"/>
+        <classes>
+            <class name="tests.AddingToCartScenario"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Adding discounted product to cart">
+        <parameter name="product" value="discountedProduct"/>
+        <classes>
+            <class name="tests.AddingToCartScenario"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Adding multiple items of the same product to cart">
+        <parameter name="product" value="multipleArticlesProduct"/>
+        <classes>
+            <class name="tests.AddingToCartScenario"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Adding 3 different products to cart">
+        <parameter name="product" value="threeDifferentProducts"/>
+        <classes>
+            <class name="tests.AddingToCartScenario"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -19,7 +19,6 @@ public class Environment {
 
     @SneakyThrows
     public static String getEnvProperty(String key) {
-        System.out.println("HERE");
         if (applicationProps.getString(key) == null) {
             throw new NoEnvValueException(key);
         }
