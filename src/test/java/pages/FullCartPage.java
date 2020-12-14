@@ -28,7 +28,7 @@ public class FullCartPage extends BasePage {
     protected CustomWebTable cartTable;
 
     public FullCartPage() {
-        waitForPageToLoad(deleteButton);
+        waitForPageToLoad(totalCartPrice);
     }
 
     public String getCartProductName() {
@@ -75,10 +75,11 @@ public class FullCartPage extends BasePage {
         return Double.parseDouble(stripNonDigits(priceInCart.getText()));
     }
 
-    public EmptyCartPage deleteProduct() {
-        deleteButton.click();
+    public EmptyCartPage deleteProduct(int productOrder) {
+        cartTable.getCellElement(productOrder, 7, "//a").click();
         return new EmptyCartPage();
     }
+
 
     public int getProductsInCartNumber() {
         return cartTable.getRowCount();

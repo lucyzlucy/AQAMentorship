@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Deleting from cart tests">
+    <test name="Deleting the only product from cart">
+        <parameter name="product" value="singleProduct"/>
+        <classes>
+            <class name="tests.cartTests.RemovingFromCartTests">
+                <methods>
+                    <include name="verifyTheOnlyProductCanBeRemoved"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Partially delete products from cart">
+        <parameter name="product" value="threeDifferentProducts"/>
+        <classes>
+            <class name="tests.cartTests.RemovingFromCartTests">
+                <methods>
+                    <include name="verifyOneProductOfMultipleCanBeRemoved"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Deleting multiple products from cart">
+        <parameter name="product" value="threeDifferentProducts"/>
+        <classes>
+            <class name="tests.cartTests.RemovingFromCartTests">
+                <methods>
+                    <include name="verifyAllMultipleProductsCanBeRemoved"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

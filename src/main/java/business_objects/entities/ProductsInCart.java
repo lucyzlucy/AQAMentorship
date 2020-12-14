@@ -43,6 +43,11 @@ public class ProductsInCart {
         return products.contains(product);
     }
 
+
+    public void deleteProductInList(Product product) {
+         products.remove(product);
+    }
+
     public String getPrintableProductsInCart() {
         StringBuilder productsPrintable = new StringBuilder();
 

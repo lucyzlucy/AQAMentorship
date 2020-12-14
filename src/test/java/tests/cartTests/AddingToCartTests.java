@@ -14,9 +14,9 @@ import static driver.DriverWrapper.waitImplicitly;
 import static environment.Environment.getEnvProperty;
 import static navigationUtil.PageNavigationUtil.*;
 
-public class AddingToCartScenario extends AddingToCartPreconditions {
+public class AddingToCartTests extends AddingToCartPreconditions {
 
-    @Test
+    @Test(groups = "adding")
     public void verifyProductAddedPopupIsShownWithProductDetails() {
         ProductAddedPopup popup = new ProductAddedPopup();
 
@@ -32,7 +32,7 @@ public class AddingToCartScenario extends AddingToCartPreconditions {
         softAssert.assertAll();
     }
 
-    @Test
+    @Test(groups = "adding")
     public void verifyProductDetailsInCart() {
         waitImplicitly(1000);
         FullCartPage cartPage = toFullCartPage();
@@ -44,7 +44,7 @@ public class AddingToCartScenario extends AddingToCartPreconditions {
 
         for (int i = 1; i <= numberOfProductsInCart; i++) {
             Product product = cartPage.getCartProduct(i);
-            Assert.assertTrue(productsInCart.isProductInList(product), "Product in cart" + product.toString() +" corresponds to added product" +
+            Assert.assertTrue(productsInCart.isProductInList(product), "Product in cart" + product.toString() + " corresponds to added product" +
                     "\nActual products in cart are: \n" + cartPage.getProductsInCart() + "\nExpected products in cart are: \n" + productsInCart.getPrintableProductsInCart());
         }
 
@@ -52,12 +52,8 @@ public class AddingToCartScenario extends AddingToCartPreconditions {
         Assert.assertEquals(cartPage.getCartTotalPrice(), productsInCart.getTotalPrice(), "The total price is correct");
     }
 
-    @AfterClass
-    @Override
-    public void tearDown() {
-        DriverWrapper.clearBrowserCookies();
-    }
-
-
 
 }
+
+
+

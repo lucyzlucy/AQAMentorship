@@ -51,7 +51,7 @@ public class CartTests extends BaseTest {
     public void verifyDeletingProductsFromCart() {
         waitImplicitly(1000);
         FullCartPage cartPage = toFullCartPage();
-        cartPage.deleteProduct();
+        cartPage.deleteProduct(1);
 
         Assert.assertTrue(cartPage.getErrorMessage().contains(getEnvProperty("emptyCartMessage")), "Correct message about empty cart is shown");
     }

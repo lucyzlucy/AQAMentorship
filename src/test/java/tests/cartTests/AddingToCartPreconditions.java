@@ -2,9 +2,9 @@ package tests.cartTests;
 
 import business_objects.entities.Product;
 import business_objects.entities.ProductsInCart;
+import driver.DriverWrapper;
 import environment.Environment;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import pages.ProductPage;
 import tests.BaseTest;
 
@@ -14,11 +14,12 @@ import static utils.Randomizer.getRandomInt;
 
 public class AddingToCartPreconditions extends BaseTest {
     Product addedProduct;
-    ProductsInCart productsInCart = new ProductsInCart();
+    ProductsInCart productsInCart;
 
     @Parameters({"product"})
-    @BeforeClass
+    @BeforeTest
     public void addProductToCart(String product) {
+        productsInCart = new ProductsInCart();
         switch (product) {
             case "singleProduct": {
                 addedProduct = addSingleProductToCart(false);

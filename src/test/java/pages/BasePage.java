@@ -1,12 +1,9 @@
 package pages;
 
-import driver.DriverFactory;
 import driver.DriverWrapper;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
 
 import static driver.DriverWrapper.getCurrentUrl;
 import static driver.DriverWrapper.isElementLoaded;

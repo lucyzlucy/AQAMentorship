@@ -27,4 +27,10 @@ public class CustomWebTable extends CustomElement {
         String cellData = base.findElement(By.xpath("./tbody/tr[" + rowNumber + "]/td[" + columnNumber + "]" + xpath)).getAttribute("value");
         return cellData;
     }
+
+
+    public WebElement getCellElement(int rowNumber, int columnNumber, String xpath) {
+        WebElement element = base.findElement(By.xpath("./tbody/tr[" + rowNumber + "]/td[" + columnNumber + "]" + xpath));
+        return element;
+    }
 }

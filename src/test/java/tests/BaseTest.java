@@ -12,7 +12,7 @@ public class BaseTest {
         DriverWrapper.initDriver();
     }
 
-    @AfterMethod
+    @AfterTest
     public void tearDown() {
         DriverWrapper.clearBrowserCookies();
     }
