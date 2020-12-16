@@ -1,54 +1,55 @@
-package tests.cartTests;
+package tests.cartTests.cartFactoryMultithreaded;
 
 import business_objects.entities.Product;
 import business_objects.entities.ProductsInCart;
-import driver.DriverWrapper;
 import environment.Environment;
-import org.testng.annotations.*;
-import pages.ProductPage;
-import tests.BaseTest;
+import pages2.pages.ProductPage;
+import tests.cartTests.ProductEnum;
 
-import static driver.DriverWrapper.waitImplicitly;
-import static navigationUtil.PageNavigationUtil.*;
+import static navigationUtil.PageNavigationUtil2.*;
 import static utils.Randomizer.getRandomInt;
 
-public class AddingToCartPreconditions extends BaseTest {
+public class AddingToCartFactoryPreconditionsMult {
     Product addedProduct;
     ProductsInCart productsInCart;
+    ProductEnum product;
 
-    @Parameters({"product"})
-    @BeforeTest
-    public void addProductToCart(String product) {
+    public AddingToCartFactoryPreconditionsMult(ProductEnum product) {
+        this.product = product;
+    }
+
+    public void addProductToCart(ProductEnum product) {
         productsInCart = new ProductsInCart();
+        System.out.println(product);
         switch (product) {
-            case "singleProduct": {
+            case singleProduct: {
                 addedProduct = addSingleProductToCart(false);
                 productsInCart.addProduct(addedProduct);
             }
             break;
-            case "discountedProduct": {
+            case discountedProduct: {
                 addedProduct = addSingleProductToCart(true);
                 productsInCart.addProduct(addedProduct);
             }
             break;
-            case "multipleArticlesProduct": {
-                addedProduct = addMultipleArticlesOfTheSameProduct();
-                productsInCart.addProduct(addedProduct);
-            }
-            break;
-            case "threeDifferentProducts": {
-                addedProduct = addMultipleArticlesOfTheSameProduct();
-                productsInCart.addProduct(addedProduct);
-                waitImplicitly(1000);
-
-                addedProduct = addSingleProductToCart(true);
-                productsInCart.addProduct(addedProduct);
-                waitImplicitly(1000);
-
-                addedProduct = addSingleProductToCart(false);
-                productsInCart.addProduct(addedProduct);
-                waitImplicitly(1000);
-            }
+//            case multipleArticlesProduct: {
+//                addedProduct = addMultipleArticlesOfTheSameProduct();
+//                productsInCart.addProduct(addedProduct);
+//            }
+//            break;
+//            case threeDifferentProducts: {
+//                addedProduct = addMultipleArticlesOfTheSameProduct();
+//                productsInCart.addProduct(addedProduct);
+//                waitImplicitly(1000);
+//
+//                addedProduct = addSingleProductToCart(true);
+//                productsInCart.addProduct(addedProduct);
+//                waitImplicitly(1000);
+//
+//                addedProduct = addSingleProductToCart(false);
+//                productsInCart.addProduct(addedProduct);
+//                waitImplicitly(1000);
+//            }
         }
     }
 

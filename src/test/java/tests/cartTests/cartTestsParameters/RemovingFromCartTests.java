@@ -1,4 +1,4 @@
-package tests.cartTests;
+package tests.cartTests.cartTestsParameters;
 
 import business_objects.entities.Product;
 import business_objects.entities.ProductsInCart;

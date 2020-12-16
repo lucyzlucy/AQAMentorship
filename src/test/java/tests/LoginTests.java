@@ -6,6 +6,8 @@ import data.dataProvider.UserDataProvider;
 import data.dataProvider.UserDataProvider2;
 import data.dataProvider.UserDataProvider3;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.BasePage;
 import pages.SignInPage;
@@ -18,6 +20,16 @@ import static navigationUtil.PageNavigationUtil.toMainPage;
 import static navigationUtil.PageNavigationUtil.toSignInPage;
 
 public class LoginTests extends BaseTest {
+    @BeforeClass
+    public void fff() {
+        System.out.println("BeforeClass");
+    }
+
+    @BeforeTest
+    public void ddddd() {
+        System.out.println("BeforeTest");
+    }
+
 
     @Test
     public void verifyCanNavigateToSignInPageFromMain() {

@@ -4,31 +4,31 @@
     <test name="Deleting the only product from cart">
         <parameter name="product" value="singleProduct"/>
         <classes>
-            <class name="tests.cartTests.RemovingFromCartTests">
+            <class name="tests.cartTestsParameters.RemovingFromCartTests">
                 <methods>
                     <include name="verifyTheOnlyProductCanBeRemoved"/>
                 </methods>
             </class>
         </classes>
     </test> <!-- Test -->
-    <test name="Partially delete products from cart">
-        <parameter name="product" value="threeDifferentProducts"/>
-        <classes>
-            <class name="tests.cartTests.RemovingFromCartTests">
-                <methods>
-                    <include name="verifyOneProductOfMultipleCanBeRemoved"/>
-                </methods>
-            </class>
-        </classes>
-    </test> <!-- Test -->
-    <test name="Deleting multiple products from cart">
-        <parameter name="product" value="threeDifferentProducts"/>
-        <classes>
-            <class name="tests.cartTests.RemovingFromCartTests">
-                <methods>
-                    <include name="verifyAllMultipleProductsCanBeRemoved"/>
-                </methods>
-            </class>
-        </classes>
-    </test> <!-- Test -->
+<!--    <test name="Partially delete products from cart">-->
+<!--        <parameter name="product" value="threeDifferentProducts"/>-->
+<!--        <classes>-->
+<!--            <class name="tests.cartTestsParameters.RemovingFromCartTests">-->
+<!--                <methods>-->
+<!--                    <include name="verifyOneProductOfMultipleCanBeRemoved"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+<!--    <test name="Deleting multiple products from cart">-->
+<!--        <parameter name="product" value="threeDifferentProducts"/>-->
+<!--        <classes>-->
+<!--            <class name="tests.cartTestsParameters.RemovingFromCartTests">-->
+<!--                <methods>-->
+<!--                    <include name="verifyAllMultipleProductsCanBeRemoved"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
 </suite> <!-- Suite -->

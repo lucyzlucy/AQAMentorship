@@ -1,23 +1,43 @@
-package tests.cartTests;
+package tests.cartTests.cartFactoryMultithreaded;
 
 import business_objects.entities.Product;
-import business_objects.entities.ProductsInCart;
-import driver.DriverWrapper;
-import environment.Environment;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.FullCartPage;
-import pages.ProductAddedPopup;
+import pages2.pages.FullCartPage;
+import pages2.pages.ProductAddedPopup;
+import tests.cartTests.ProductEnum;
 
-import static driver.DriverWrapper.waitImplicitly;
+import static driver.DriverWrapperThreadSafe.initDriver;
+import static driver.DriverWrapperThreadSafe.waitImplicitly;
 import static environment.Environment.getEnvProperty;
-import static navigationUtil.PageNavigationUtil.*;
+import static navigationUtil.PageNavigationUtil2.toFullCartPage;
 
-public class AddingToCartTests extends AddingToCartPreconditions {
+public class AddingToCartFactoryTestsMult extends AddingToCartFactoryPreconditionsMult {
 
-    @Test(groups = "adding")
+//    @Factory(dataProvider = "data")
+    public AddingToCartFactoryTestsMult(ProductEnum product) {
+        super(product);
+        System.out.println("TestClass " + getClass().getSimpleName() + " with Thread Id: " + Thread.currentThread().getId());
+
+    }
+
+//    @DataProvider(name = "data", parallel = true)
+//    public static Object[] dataProvider() {
+//        return ArrayUtil.buildATwoDimensionalArray(ProductEnum.values());
+//    }
+
+    @BeforeClass
+    public void before() {
+        initDriver();
+        addProductToCart(product);
+    }
+
+    @Test
     public void verifyProductAddedPopupIsShownWithProductDetails() {
+        System.out.println("Test Case One in " + getClass().getSimpleName() + " with Thread Id: " + Thread.currentThread().getId());
+        System.out.println(addedProduct.getName());
         ProductAddedPopup popup = new ProductAddedPopup();
 
         SoftAssert softAssert = new SoftAssert();
@@ -32,8 +52,10 @@ public class AddingToCartTests extends AddingToCartPreconditions {
         softAssert.assertAll();
     }
 
-    @Test(groups = "adding")
+    @Test(dependsOnMethods = "verifyProductAddedPopupIsShownWithProductDetails")
     public void verifyProductDetailsInCart() {
+        System.out.println("Test Case Two in " + getClass().getSimpleName() + " with Thread Id: " + Thread.currentThread().getId());
+
         waitImplicitly(1000);
         FullCartPage cartPage = toFullCartPage();
 
@@ -51,9 +73,4 @@ public class AddingToCartTests extends AddingToCartPreconditions {
 
         Assert.assertEquals(cartPage.getCartTotalPrice(), productsInCart.getTotalPrice(), "The total price is correct");
     }
-
-
 }
-
-
-
