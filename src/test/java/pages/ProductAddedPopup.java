@@ -1,12 +1,17 @@
 package pages;
 
+import business_objects.builders.ProductBuilder;
+import business_objects.entities.Product;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import static driver.DriverWrapper.isElementLoaded;
 import static utils.StripNonDigitsUtil.stripNonDigits;
 
-public class ProductAddedPopup extends BasePage{
+@Log4j2
+
+public class ProductAddedPopup extends BasePage {
     @FindBy(id = "layer_cart_product_title")
     protected WebElement productName;
 
@@ -21,9 +26,17 @@ public class ProductAddedPopup extends BasePage{
 
     @FindBy(className = "ajax_cart_quantity")
     protected WebElement cartQty;
-
     @FindBy(xpath = "//h2[child::i]")
     protected WebElement successMessage;
+
+    public ProductAddedPopup() {
+        isElementLoaded(productName);
+
+        log.info("The product is:\n" + getProduct().toString());
+        log.info("Cart price is:" + getCartProductTotalPrice());
+        log.info("Cart QTY is:" + getCartQty());
+
+    }
 
     public String getMessage() {
         isElementLoaded(successMessage);
@@ -50,5 +63,7 @@ public class ProductAddedPopup extends BasePage{
         return Integer.parseInt(cartQty.getText());
     }
 
-
+    public Product getProduct() {
+        return new ProductBuilder().setName(getProductName()).setPrice(getProductPrice()).setQuantity(getProductQty()).make();
+    }
 }

@@ -2,11 +2,13 @@ package pages;
 
 import business_objects.builders.ProductBuilder;
 import business_objects.entities.Product;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import static utils.StripNonDigitsUtil.stripNonDigits;
 
+@Log4j2
 public class ProductPage extends BasePage {
 
     @FindBy(xpath = "//*[@itemprop='name']")
@@ -20,6 +22,10 @@ public class ProductPage extends BasePage {
 
     @FindBy(xpath = "//*[@id='add_to_cart']//button[@type='submit']")
     protected WebElement addToCartButton;
+
+    public ProductPage() {
+        log.info("The product is:\n" + getProduct().toString());
+    }
 
     public String getProductName() {
         return productName.getText();
@@ -43,5 +49,8 @@ public class ProductPage extends BasePage {
 
     public void addProductToCart() {
         addToCartButton.click();
+
+        log.info("Added product to cart by clicking on addToCartButton.");
+
     }
 }

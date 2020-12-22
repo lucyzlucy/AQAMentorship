@@ -1,10 +1,11 @@
 package pages;
 
 import business_objects.entities.User;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-
+@Log4j2
 public class RegisterPage extends BasePage {
     @FindBy(id = "customer_firstname")
     private WebElement firstNameInput;
@@ -51,13 +52,21 @@ public class RegisterPage extends BasePage {
         zipInput.sendKeys(user.getZip());
         countryInput.sendKeys(user.getCountry());
         phoneInput.sendKeys(user.getPhone());
+
+        log.info("Filled in user info: " + user.toString());
+
         registerButton.click();
+
+        log.info("Submitted user info by clicking on registerButton");
+
         return this;
     }
 
     public RegisterPage submitEmptyRegistrationInfo() {
-
         registerButton.click();
+
+        log.info("Submitted empty user info by clicking on registerButton");
+
         return this;
     }
 }

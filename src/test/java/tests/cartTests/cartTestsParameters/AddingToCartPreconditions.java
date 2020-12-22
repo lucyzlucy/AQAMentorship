@@ -2,7 +2,9 @@ package tests.cartTests.cartTestsParameters;
 
 import business_objects.entities.Product;
 import business_objects.entities.ProductsInCart;
+import driver.DriverWrapper;
 import environment.Environment;
+import lombok.extern.log4j.Log4j2;
 import org.testng.annotations.*;
 import pages.ProductPage;
 import tests.BaseTest;
@@ -49,6 +51,11 @@ public class AddingToCartPreconditions extends BaseTest {
                 waitImplicitly(1000);
             }
         }
+    }
+
+    @AfterTest
+    public void tearDown() {
+        super.tearDown();
     }
 
     protected Product addSingleProductToCart(boolean discounted) {

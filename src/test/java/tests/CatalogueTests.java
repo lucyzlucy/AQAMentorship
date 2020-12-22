@@ -2,6 +2,7 @@ package tests;
 
 import business_objects.entities.Product;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.*;
@@ -15,6 +16,7 @@ public class CatalogueTests extends BaseTest {
     @Test
     public void verifyCanNavigateToCartPageFromCatalogue() {
         CataloguePage page = toMainPage();
+
         page.clickOnCart();
 
         Assert.assertEquals(page.getUrl(), getEnvProperty("cartPageUrl"));

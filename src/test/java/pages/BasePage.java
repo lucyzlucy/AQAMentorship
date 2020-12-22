@@ -1,13 +1,14 @@
 package pages;
 
 import driver.DriverWrapper;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
-
 
 import static driver.DriverWrapper.getCurrentUrl;
 import static driver.DriverWrapper.isElementLoaded;
 
+@Log4j2
 public class BasePage {
     @FindBy(className = "login")
     protected WebElement signinNavigationButton;
@@ -29,6 +30,7 @@ public class BasePage {
 
     public BasePage() {
         DriverWrapper.initElements(this);
+        log.info(this.getClass().getSimpleName() + " is opened");
     }
 
     protected void waitForPageToLoad(WebElement keyElement) {
@@ -46,12 +48,18 @@ public class BasePage {
 
     public BasePage clickOnSignOut() {
         signOutNavigationButton.click();
+
+        log.info("Signed out by clicking on signOutNavigationButton");
+
         return this;
     }
 
     public BasePage closePopup() {
         isElementLoaded(closeButton);
         closeButton.click();
+
+        log.info("Closed the popup by clicking on closeButton");
+
         return this;
     }
 
@@ -77,6 +85,9 @@ public class BasePage {
 
     public FullCartPage clickOnCart() {
         cartButton.click();
+
+        log.info("Navigated to cart by clicking on cartButton on the header");
+
         return new FullCartPage();
     }
 

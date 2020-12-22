@@ -4,6 +4,7 @@ import business_objects.entities.User;
 import data.UserFactory;
 import data.dataProvider.UserDataProvider;
 import data.dataProvider.UserDataProvider2;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import pages.RegisterPage;
 import pages.SignInPage;

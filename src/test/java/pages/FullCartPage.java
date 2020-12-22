@@ -4,13 +4,14 @@ import business_objects.builders.ProductBuilder;
 import business_objects.entities.Product;
 import business_objects.entities.ProductsInCart;
 import driver.elements.CustomWebTable;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import static utils.StripNonDigitsUtil.stripNonDigits;
 
-
+@Log4j2
 public class FullCartPage extends BasePage {
     @FindBy(className = "cart_quantity_delete")
     protected WebElement deleteButton;
@@ -39,7 +40,6 @@ public class FullCartPage extends BasePage {
         String productName = getProductName(order);
         double productPrice = getProductPrice(order);
         int productQuantity = getProductQuantity(order);
-        double productTotalPrice = getProductTotalPrice(order);
 
         Product product = new ProductBuilder()
                 .setName(productName)
@@ -76,7 +76,12 @@ public class FullCartPage extends BasePage {
     }
 
     public EmptyCartPage deleteProduct(int productOrder) {
+        String productToBeDeleted = getProductName(productOrder);
+
         cartTable.getCellElement(productOrder, 7, "//a").click();
+
+        log.info("Deleted product :\n" + productToBeDeleted);
+
         return new EmptyCartPage();
     }
 

@@ -1,5 +1,6 @@
 package pages;
 
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -9,6 +10,7 @@ import java.util.List;
 
 import static utils.Randomizer.getRandomInt;
 
+@Log4j2
 public class CataloguePage extends BasePage {
 
     @FindBy(className = "menu-content")
@@ -24,18 +26,34 @@ public class CataloguePage extends BasePage {
 
     public CataloguePage clickOnRandomCatalogueSection() {
         List<WebElement> children = catalogueMenu.findElements(By.xpath("./li"));
-        children.get(getRandomInt(children.size())).click();
+        WebElement randomCatalogueSection = children.get(getRandomInt(children.size()));
+        String catalogueItemName = randomCatalogueSection.getText();
+
+        randomCatalogueSection.click();
+
+        log.info("Clicked on catalogue section " + catalogueItemName);
+
         return this;
     }
 
     public CataloguePage clickOnCatalogueSection(int catalogueSectionOrder) {
         List<WebElement> children = catalogueMenu.findElements(By.xpath("./li"));
-        children.get(catalogueSectionOrder).click();
+        WebElement catalogueSection = children.get(catalogueSectionOrder);
+        String catalogueItemName = catalogueSection.getText();
+
+        catalogueSection.click();
+
+        log.info("Clicked on catalogue section " + catalogueItemName);
+
         return this;
     }
 
     public ProductCell chooseRandomProduct() {
-        WebElement productElement = productList.get(getRandomInt(productList.size()));
+        int productOrder = getRandomInt(productList.size());
+        WebElement productElement = productList.get(productOrder);
+        log.info("Clicked on catalogue product number  " + productOrder);
+
+
         return new ProductCell(productElement);
     }
 

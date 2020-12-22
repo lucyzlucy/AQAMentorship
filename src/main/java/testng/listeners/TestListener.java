@@ -1,10 +1,11 @@
 package testng.listeners;
 
-import org.testng.IInvokedMethod;
-import org.testng.IInvokedMethodListener;
-import org.testng.ITestResult;
+import lombok.extern.log4j.Log4j2;
+import org.testng.*;
 
-public class TestListener implements IInvokedMethodListener {
+
+@Log4j2
+public class TestListener implements IInvokedMethodListener, ITestListener {
 
     @Override
     public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
@@ -18,4 +19,26 @@ public class TestListener implements IInvokedMethodListener {
             method.getTestMethod().setRetryAnalyzerClass(null);
         }
     }
+
+    @Override
+    public void onTestStart(ITestResult result) {
+        log.info(result.getMethod().getMethodName() + " STARTED");
+    }
+
+    @Override
+    public void onTestSuccess(ITestResult result) {
+        log.info(result.getMethod().getMethodName() + " PASSED");
+    }
+
+    @Override
+    public void onTestFailure(ITestResult result) {
+        log.info(result.getMethod().getMethodName() + " FAILED");
+    }
+
+    @Override
+    public void onTestSkipped(ITestResult result) {
+        log.info(result.getMethod().getMethodName() + " SKIPPED");
+    }
+
+
 }

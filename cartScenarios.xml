@@ -4,8 +4,8 @@
     <test name="Adding and deleting a single product">
         <parameter name="product" value="singleProduct"/>
         <classes>
-            <class name="tests.cartTestsParameters.AddingToCartTests"/>
-            <class name="tests.cartTestsParameters.RemovingFromCartTests">
+            <class name="tests.cartTests.cartTestsParameters.AddingToCartTests"/>
+            <class name="tests.cartTests.cartTestsParameters.RemovingFromCartTests">
                 <methods>
                     <include name="verifyTheOnlyProductCanBeRemoved"/>
                 </methods>
@@ -15,8 +15,8 @@
     <test name="Adding and deleting discounted product">
         <parameter name="product" value="discountedProduct"/>
         <classes>
-            <class name="tests.cartTestsParameters.AddingToCartTests"/>
-            <class name="tests.cartTestsParameters.RemovingFromCartTests">
+            <class name="tests.cartTests.cartTestsParameters.AddingToCartTests"/>
+            <class name="tests.cartTests.cartTestsParameters.RemovingFromCartTests">
                 <methods>
                     <include name="verifyTheOnlyProductCanBeRemoved"/>
                 </methods>
@@ -26,8 +26,8 @@
     <test name="Adding and deleting multiple items of the same product">
         <parameter name="product" value="multipleArticlesProduct"/>
         <classes>
-            <class name="tests.cartTestsParameters.AddingToCartTests"/>
-            <class name="tests.cartTestsParameters.RemovingFromCartTests">
+            <class name="tests.cartTests.cartTestsParameters.AddingToCartTests"/>
+            <class name="tests.cartTests.cartTestsParameters.RemovingFromCartTests">
                 <methods>
                     <include name="verifyTheOnlyProductCanBeRemoved"/>
                 </methods>
@@ -37,8 +37,8 @@
     <test name="Adding and deleting multiple products from cart">
         <parameter name="product" value="threeDifferentProducts"/>
         <classes>
-            <class name="tests.cartTestsParameters.AddingToCartTests"/>
-            <class name="tests.cartTestsParameters.RemovingFromCartTests">
+            <class name="tests.cartTests.cartTestsParameters.AddingToCartTests"/>
+            <class name="tests.cartTests.cartTestsParameters.RemovingFromCartTests">
                 <methods>
                     <include name="verifyOneProductOfMultipleCanBeRemoved"/>
                     <include name="verifyAllMultipleProductsCanBeRemoved"/>
