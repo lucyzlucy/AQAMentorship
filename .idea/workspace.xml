@@ -554,9 +554,10 @@
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
     <state x="2610" y="348" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605090279012" />
-    <state x="2455" y="0" key="CommitChangelistDialog2" timestamp="1608122293504">
-      <screen x="1920" y="0" width="1920" height="1200" />
+    <state x="2455" y="-307" key="CommitChangelistDialog2" timestamp="1608646561656">
+      <screen x="1920" y="-307" width="1920" height="1200" />
     </state>
+    <state x="2455" y="-307" key="CommitChangelistDialog2/62.0.1218.720/1920.-307.1920.1200@1920.-307.1920.1200" timestamp="1608646561656" />
     <state x="2455" y="0" key="CommitChangelistDialog2/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1608122293504" />
     <state x="401" y="0" key="CommitChangelistDialog2/62.0.1218.720/1920.0.1920.1200@62.0.1218.720" timestamp="1607597634858" />
     <state x="2455" y="195" key="CommitChangelistDialog2/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606732964185" />
@@ -678,9 +679,10 @@
     <state x="2091" y="-300" key="SettingsEditor/62.0.1218.720/1920.-307.1920.1200@1920.-307.1920.1200" timestamp="1608624469034" />
     <state x="2091" y="7" key="SettingsEditor/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605087592770" />
     <state x="175" y="4" key="SettingsEditor/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604489190007" />
-    <state x="2472" y="277" key="Vcs.Push.Dialog.v2" timestamp="1608122299319">
-      <screen x="1920" y="0" width="1920" height="1200" />
+    <state x="2472" y="-30" key="Vcs.Push.Dialog.v2" timestamp="1608646570869">
+      <screen x="1920" y="-307" width="1920" height="1200" />
     </state>
+    <state x="2472" y="-30" key="Vcs.Push.Dialog.v2/62.0.1218.720/1920.-307.1920.1200@1920.-307.1920.1200" timestamp="1608646570869" />
     <state x="2472" y="277" key="Vcs.Push.Dialog.v2/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1608122299319" />
     <state x="412" y="166" key="Vcs.Push.Dialog.v2/62.0.1218.720/1920.0.1920.1200@62.0.1218.720" timestamp="1607619893432" />
     <state x="2472" y="322" key="Vcs.Push.Dialog.v2/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606734670702" />

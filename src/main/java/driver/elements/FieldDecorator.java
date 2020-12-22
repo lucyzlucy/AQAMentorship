@@ -4,6 +4,7 @@ import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
 import org.openqa.selenium.support.pagefactory.DefaultFieldDecorator;
 import org.openqa.selenium.support.pagefactory.ElementLocator;
@@ -34,6 +35,9 @@ public class FieldDecorator extends DefaultFieldDecorator {
 
     public FieldDecorator(SearchContext searchContext) {
         super(new DefaultElementLocatorFactory(searchContext));
+    }
+    public FieldDecorator(SearchContext searchContext, int duration) {
+        super(new AjaxElementLocatorFactory(searchContext, duration));
     }
 
     @Override
