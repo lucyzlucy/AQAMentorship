@@ -10,7 +10,7 @@ import static driver.DriverWrapper.isElementLoaded;
 
 @Log4j2
 public class BasePage {
-    @FindBy(className = "login")
+    @FindBy(className = "loginsss")
     protected WebElement signinNavigationButton;
 
     @FindBy(className = "logout")
@@ -43,6 +43,9 @@ public class BasePage {
 
     public SignInPage navigateToSignInPage() {
         signinNavigationButton.click();
+
+        log.info("Clicked on signinNavigationButton");
+
         return new SignInPage();
     }
 

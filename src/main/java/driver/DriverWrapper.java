@@ -3,29 +3,30 @@ package driver;
 import driver.elements.FieldDecorator;
 import environment.Environment;
 import lombok.SneakyThrows;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.Logs;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-
+@Log4j2
 public class DriverWrapper {
-    protected static final int WAIT_ELEMENT_TIMEOUT = Integer.parseInt(Environment.getEnvProperty("driver.timeout"));;
-    private static WebDriver driver = DriverFactory.getDriver();
+    protected static final int WAIT_ELEMENT_TIMEOUT = Integer.parseInt(Environment.getEnvProperty("driver.timeout"));
+    ;
+    private static WebDriver driver = DriverFactory.getFiringDriver();
 
     public static void initDriver() {
         if (driver == null) {
-            driver = DriverFactory.getDriver();
+            driver = DriverFactory.getFiringDriver();
         }
-    }
-
-    public static void getNewDriver() {
-        driver = DriverFactory.getDriver();
-
     }
 
     public static void killDriverInstance() {
@@ -74,5 +75,12 @@ public class DriverWrapper {
         driver.navigate().refresh();
     }
 
+    public static void showLogs() {
+        Logs logs = driver.manage().logs();
+        LogEntries logEntries = logs.get(LogType.DRIVER);
 
+        for (LogEntry logEntry : logEntries) {
+            log.info(logEntry.getMessage());
+        }
+    }
 }
