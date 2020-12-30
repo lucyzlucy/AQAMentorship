@@ -18,8 +18,6 @@ public class BaseTest {
 
     @BeforeSuite
     public void setUp() {
-        DriverWrapper.initDriver();
-
         Log.log("Setup");
     }
 
