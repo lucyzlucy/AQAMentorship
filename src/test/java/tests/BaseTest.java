@@ -32,7 +32,7 @@ public class BaseTest {
 
     @AfterSuite
     public void close() {
-        DriverWrapper.showLogs();
+//        DriverWrapper.showLogs();
 
         DriverWrapper.killDriverInstance();
         Log.log("Killed driver");
