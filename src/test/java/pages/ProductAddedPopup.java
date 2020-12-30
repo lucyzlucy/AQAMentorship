@@ -2,6 +2,7 @@ package pages;
 
 import business_objects.builders.ProductBuilder;
 import business_objects.entities.Product;
+import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,31 +39,38 @@ public class ProductAddedPopup extends BasePage {
 
     }
 
+    @Step
     public String getMessage() {
         isElementLoaded(successMessage);
         return successMessage.getText();
     }
 
+    @Step
     public String getProductName() {
         return productName.getText();
     }
 
+    @Step
     public double getProductPrice() {
         return Double.parseDouble(stripNonDigits(productPrice.getText()));
     }
 
+    @Step
     public double getCartProductTotalPrice() {
         return Double.parseDouble(stripNonDigits(cartProductTotalPrice.getText()));
     }
 
+    @Step
     public int getProductQty() {
         return Integer.parseInt(productQty.getText());
     }
 
+    @Step
     public int getCartQty() {
         return Integer.parseInt(cartQty.getText());
     }
 
+    @Step
     public Product getProduct() {
         return new ProductBuilder().setName(getProductName()).setPrice(getProductPrice()).setQuantity(getProductQty()).make();
     }

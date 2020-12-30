@@ -1,6 +1,7 @@
 package pages;
 
 import business_objects.entities.User;
+import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -40,6 +41,7 @@ public class RegisterPage extends BasePage {
     public RegisterPage(){
         waitForPageToLoad(registerButton);
     }
+    @Step
 
     public RegisterPage submitValidRegistrationInfo(User user) {
 
@@ -61,6 +63,7 @@ public class RegisterPage extends BasePage {
 
         return this;
     }
+    @Step
 
     public RegisterPage submitEmptyRegistrationInfo() {
         registerButton.click();

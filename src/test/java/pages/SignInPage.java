@@ -2,6 +2,7 @@ package pages;
 
 import business_objects.entities.User;
 import environment.Environment;
+import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,6 +30,7 @@ public class SignInPage extends BasePage {
         waitForPageToLoad(submitSignInButton);
     }
 
+    @Step
     public SignInPage submitCredentials(User user) {
         emailInput.sendKeys(user.getEmail());
         passInput.sendKeys(user.getPassword());
@@ -42,6 +44,8 @@ public class SignInPage extends BasePage {
         return this;
     }
 
+    @Step
+
     public SignInPage submitEmptyCredentials() {
         submitSignInButton.click();
 
@@ -49,6 +53,8 @@ public class SignInPage extends BasePage {
 
         return this;
     }
+
+    @Step
 
     public RegisterPage submitEmailForRegistration(String email) {
         emailRegisterInput.sendKeys(email);
@@ -62,6 +68,8 @@ public class SignInPage extends BasePage {
         return new RegisterPage();
     }
 
+    @Step
+
     public SignInPage submitEmptyEmailForRegistration() {
         submitCreateButton.click();
 
@@ -69,6 +77,8 @@ public class SignInPage extends BasePage {
 
         return this;
     }
+
+    @Step
 
     public SignInPage submitExistingEmailForRegistration(String email) {
         emailRegisterInput.sendKeys(email);

@@ -1,6 +1,7 @@
 package pages;
 
 import driver.DriverWrapper;
+import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +11,7 @@ import static driver.DriverWrapper.isElementLoaded;
 
 @Log4j2
 public class BasePage {
-    @FindBy(className = "loginsss")
+    @FindBy(className = "login")
     protected WebElement signinNavigationButton;
 
     @FindBy(className = "logout")
@@ -41,6 +42,7 @@ public class BasePage {
         return getCurrentUrl();
     }
 
+    @Step
     public SignInPage navigateToSignInPage() {
         signinNavigationButton.click();
 
@@ -49,6 +51,7 @@ public class BasePage {
         return new SignInPage();
     }
 
+    @Step
     public BasePage clickOnSignOut() {
         signOutNavigationButton.click();
 
@@ -57,6 +60,7 @@ public class BasePage {
         return this;
     }
 
+    @Step
     public BasePage closePopup() {
         isElementLoaded(closeButton);
         closeButton.click();

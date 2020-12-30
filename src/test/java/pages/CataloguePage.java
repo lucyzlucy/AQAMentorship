@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -24,6 +25,7 @@ public class CataloguePage extends BasePage {
         waitForPageToLoad(catalogueMenu);
     }
 
+    @Step
     public CataloguePage clickOnRandomCatalogueSection() {
         List<WebElement> children = catalogueMenu.findElements(By.xpath("./li"));
         WebElement randomCatalogueSection = children.get(getRandomInt(children.size()));
@@ -36,6 +38,7 @@ public class CataloguePage extends BasePage {
         return this;
     }
 
+    @Step
     public CataloguePage clickOnCatalogueSection(int catalogueSectionOrder) {
         List<WebElement> children = catalogueMenu.findElements(By.xpath("./li"));
         WebElement catalogueSection = children.get(catalogueSectionOrder);
@@ -48,6 +51,7 @@ public class CataloguePage extends BasePage {
         return this;
     }
 
+    @Step
     public ProductCell chooseRandomProduct() {
         int productOrder = getRandomInt(productList.size());
         WebElement productElement = productList.get(productOrder);

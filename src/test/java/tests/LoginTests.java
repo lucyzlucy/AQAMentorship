@@ -3,12 +3,9 @@ package tests;
 import business_objects.entities.User;
 import data.UserFactory;
 import data.dataProvider.UserDataProvider;
-import data.dataProvider.UserDataProvider2;
 import data.dataProvider.UserDataProvider3;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
+
 import org.testng.annotations.Test;
 import pages.BasePage;
 import pages.SignInPage;

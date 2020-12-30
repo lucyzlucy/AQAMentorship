@@ -35,4 +35,9 @@ public class Environment {
             e.printStackTrace();
         }
     }
+
+    @SneakyThrows
+    public static PropertiesConfiguration getEnv() {
+        return applicationProps;
+    }
 }

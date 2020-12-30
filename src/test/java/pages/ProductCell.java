@@ -2,6 +2,7 @@ package pages;
 
 import business_objects.builders.ProductBuilder;
 import business_objects.entities.Product;
+import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -24,7 +25,7 @@ public class ProductCell extends BasePage {
         log.info("The product is:\n" + getProduct().toString());
 
     }
-
+    @Step
     public ProductAddedPopup addProductToCart() {
         addToCartButton.click();
         waitImplicitly(1000);
@@ -33,19 +34,22 @@ public class ProductCell extends BasePage {
 
         return new ProductAddedPopup();
     }
-
+    @Step
     public Product getProduct() {
         return new ProductBuilder().setName(getProductName()).setPrice(getProductPrice()).make();
     }
 
+    @Step
     public double getProductPrice() {
         return Double.parseDouble(stripNonDigits(productPrice.getText()));
     }
 
+    @Step
     public String getProductName() {
         return productName.getText();
     }
 
+    @Step
     public ProductPage clickOnProductName() {
         productName.click();
 

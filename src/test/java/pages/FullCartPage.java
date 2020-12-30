@@ -4,6 +4,7 @@ import business_objects.builders.ProductBuilder;
 import business_objects.entities.Product;
 import business_objects.entities.ProductsInCart;
 import driver.elements.CustomWebTable;
+import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -50,31 +51,38 @@ public class FullCartPage extends BasePage {
         return product;
     }
 
+    @Step
     public String getProductName(int productOrder) {
         return cartTable.getCellData(productOrder, 2, "/*[@class = \"product-name\"]");
     }
 
+    @Step
     public double getProductPrice(int productOrder) {
         return Double.parseDouble(stripNonDigits(cartTable.getCellData(productOrder, 4, "/*[@class = 'price']/*[contains (@class, 'price')][1]")));
     }
 
+    @Step
     public int getProductQuantity(int productOrder) {
         return Integer.parseInt(cartTable.getCellValue(productOrder, 5, "/*[contains(@class,'cart_quantity_input')]"));
     }
 
+    @Step
     public double getProductTotalPrice(int productOrder) {
         return Double.parseDouble(stripNonDigits(cartTable.getCellData(productOrder, 6)));
     }
 
 
+    @Step
     public double getCartTotalPrice() {
         return Double.parseDouble(stripNonDigits(totalCartPrice.getText()));
     }
 
+    @Step
     public double getCartProductPrice() {
         return Double.parseDouble(stripNonDigits(priceInCart.getText()));
     }
 
+    @Step
     public EmptyCartPage deleteProduct(int productOrder) {
         String productToBeDeleted = getProductName(productOrder);
 
@@ -86,10 +94,12 @@ public class FullCartPage extends BasePage {
     }
 
 
+    @Step
     public int getProductsInCartNumber() {
         return cartTable.getRowCount();
     }
 
+    @Step
     public String getProductsInCart() {
         StringBuilder products = new StringBuilder();
         for (int i = 1; i <= getProductsInCartNumber(); i++) {
