@@ -8,12 +8,12 @@ import static environment.Environment.getEnvProperty;
 public class PageNavigationUtil {
     public static CataloguePage toMainPage() {
         DriverWrapper.navigateToPage(getEnvProperty("cataloguePageUrl"));
-        return new CataloguePage();
+        return (CataloguePage) new CataloguePage().get();
     }
 
     public static SignInPage toSignInPage() {
         DriverWrapper.navigateToPage(getEnvProperty("signInPageUrl"));
-        return new SignInPage();
+        return (SignInPage) new SignInPage().get();
     }
 
     public static EmptyCartPage toEmptyCartPage() {

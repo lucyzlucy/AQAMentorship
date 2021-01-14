@@ -2,40 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4246cf7-c8d2-4438-87a5-6b6e4613685d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/allure.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/Log.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ReportingHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/logback-test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/driver/DriverWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/driver/DriverWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/environment/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/environment/Environment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/testng/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testng/listeners/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/navigationUtil/PageNavigationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/navigationUtil/PageNavigationUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/CataloguePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CataloguePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/FullCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/FullCartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProductAddedPopup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProductAddedPopup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProductCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProductCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegisterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SignInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business_objects/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business_objects/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/driver/DriverFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/driver/DriverFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/driver/DriverWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/driver/DriverWrapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/environment.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/environment.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/BasePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/CataloguePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/CataloguePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/FullCartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/FullCartPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/ProductPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/ProductPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/RegisterPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/RegisterPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/SignInPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/SignInPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/CartTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/CartTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/LoginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/LoginTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/RegisterTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/RegisterTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/AQAMentorshipEPAM.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +48,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="copyright.filetypes.HTML" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -483,13 +456,31 @@
       <option name="project" value="LOCAL" />
       <updated>1608735493151</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="&quot;Configured Allure&quot;">
+      <created>1609337523054</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1609337523055</updated>
+    </task>
+    <task id="LOCAL-00031" summary="&quot;Configured Maven. Added test suite&quot;">
+      <created>1609338846860</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1609338846860</updated>
+    </task>
+    <task id="LOCAL-00032" summary="&quot;Removed init driver from BaseTest&quot;">
+      <created>1609346917507</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1609346917507</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&quot;Refactored env&quot;" />
-    <MESSAGE value="&quot;Refactored env2&quot;" />
-    <MESSAGE value="&quot;Added Json Util and TestData methods to work with it&quot;" />
     <MESSAGE value="&quot;Moved data to test folder&quot;" />
     <MESSAGE value="&quot;Refactor&quot;" />
     <MESSAGE value="&quot;Added PageNavigationUtil&quot;" />
@@ -512,7 +503,10 @@
     <MESSAGE value="&quot;Experimented with Factory and Parallelism&quot;" />
     <MESSAGE value="&quot;Added waiter when element not found&quot;" />
     <MESSAGE value="&quot;Added logging&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Added logging&quot;" />
+    <MESSAGE value="&quot;Configured Allure&quot;" />
+    <MESSAGE value="&quot;Configured Maven. Added test suite&quot;" />
+    <MESSAGE value="&quot;Removed init driver from BaseTest&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Removed init driver from BaseTest&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="266" y="20" key="#Project_Structure" timestamp="1604995562346">
@@ -540,9 +534,10 @@
     <state x="2562" y="96" key="#com.intellij.fileTypes.FileTypeChooser/62.0.1218.720/1920.-307.1920.1200@1920.-307.1920.1200" timestamp="1608623684009" />
     <state x="2561" y="404" key="#com.intellij.fileTypes.FileTypeChooser/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1607511603011" />
     <state x="469" y="242" key="#com.intellij.fileTypes.FileTypeChooser/62.0.1218.720/1920.0.1920.1200@62.0.1218.720" timestamp="1608545707995" />
-    <state x="2685" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1608713534642">
+    <state x="2685" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1610637738230">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
+    <state x="2685" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/1920.0.1920.1200@1920.0.1920.1200" timestamp="1610637738230" />
     <state x="2685" y="-70" key="#com.intellij.ide.util.MemberChooser/62.0.1218.720/1920.-307.1920.1200@1920.-307.1920.1200" timestamp="1608627458387" />
     <state x="2685" y="237" key="#com.intellij.ide.util.MemberChooser/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1608713534642" />
     <state x="547" y="142" key="#com.intellij.ide.util.MemberChooser/62.0.1218.720/1920.0.1920.1200@62.0.1218.720" timestamp="1607521173984" />
@@ -569,11 +564,11 @@
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
     <state x="2610" y="348" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605090279012" />
-    <state x="2455" y="0" key="CommitChangelistDialog2" timestamp="1608735491459">
+    <state x="2455" y="0" key="CommitChangelistDialog2" timestamp="1609346916098">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
     <state x="2455" y="-307" key="CommitChangelistDialog2/62.0.1218.720/1920.-307.1920.1200@1920.-307.1920.1200" timestamp="1608646597449" />
-    <state x="2455" y="0" key="CommitChangelistDialog2/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1608735491459" />
+    <state x="2455" y="0" key="CommitChangelistDialog2/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1609346916098" />
     <state x="401" y="0" key="CommitChangelistDialog2/62.0.1218.720/1920.0.1920.1200@62.0.1218.720" timestamp="1607597634858" />
     <state x="2455" y="195" key="CommitChangelistDialog2/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606732964185" />
     <state x="2455" y="0" key="CommitChangelistDialog2/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1607331632973" />
@@ -587,12 +582,13 @@
     </state>
     <state x="2660" y="49" key="FileChooserDialogImpl/62.0.1218.720/1920.-307.1920.1200@1920.-307.1920.1200" timestamp="1608624427201" />
     <state x="2660" y="356" key="FileChooserDialogImpl/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1607434788393" />
-    <state width="1877" height="431" key="GridCell.Tab.0.bottom" timestamp="1608823271349">
+    <state width="1877" height="442" key="GridCell.Tab.0.bottom" timestamp="1610643054725">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
+    <state width="1877" height="442" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1200@1920.0.1920.1200" timestamp="1610643054725" />
     <state width="1175" height="446" key="GridCell.Tab.0.bottom/62.0.1218.720/-1920.-413.1920.1200@62.0.1218.720" timestamp="1608622162002" />
     <state width="1877" height="422" key="GridCell.Tab.0.bottom/62.0.1218.720/1920.-307.1920.1200@1920.-307.1920.1200" timestamp="1608652688899" />
-    <state width="1877" height="431" key="GridCell.Tab.0.bottom/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1608823271349" />
+    <state width="1877" height="442" key="GridCell.Tab.0.bottom/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1609354771774" />
     <state width="1175" height="422" key="GridCell.Tab.0.bottom/62.0.1218.720/1920.0.1920.1200@62.0.1218.720" timestamp="1608731655831" />
     <state width="1877" height="379" key="GridCell.Tab.0.bottom/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1607343970328" />
     <state width="1173" height="168" key="GridCell.Tab.0.bottom/63.0.1217.720/1920.0.1920.1200@63.0.1217.720" timestamp="1605174818425" />
@@ -601,12 +597,13 @@
     <state width="1169" height="285" key="GridCell.Tab.0.bottom/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1607088277214" />
     <state width="1877" height="503" key="GridCell.Tab.0.bottom/67.0.1213.720@67.0.1213.720" timestamp="1607026056627" />
     <state width="1154" height="418" key="GridCell.Tab.0.bottom/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
-    <state width="1877" height="431" key="GridCell.Tab.0.center" timestamp="1608823271349">
+    <state width="1877" height="442" key="GridCell.Tab.0.center" timestamp="1610643054725">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
+    <state width="1877" height="442" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1200@1920.0.1920.1200" timestamp="1610643054725" />
     <state width="1175" height="446" key="GridCell.Tab.0.center/62.0.1218.720/-1920.-413.1920.1200@62.0.1218.720" timestamp="1608622162002" />
     <state width="1877" height="422" key="GridCell.Tab.0.center/62.0.1218.720/1920.-307.1920.1200@1920.-307.1920.1200" timestamp="1608652688898" />
-    <state width="1877" height="431" key="GridCell.Tab.0.center/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1608823271349" />
+    <state width="1877" height="442" key="GridCell.Tab.0.center/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1609354771773" />
     <state width="1175" height="422" key="GridCell.Tab.0.center/62.0.1218.720/1920.0.1920.1200@62.0.1218.720" timestamp="1608731655831" />
     <state width="1877" height="379" key="GridCell.Tab.0.center/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1607343970328" />
     <state width="1173" height="168" key="GridCell.Tab.0.center/63.0.1217.720/1920.0.1920.1200@63.0.1217.720" timestamp="1605174818425" />
@@ -615,12 +612,13 @@
     <state width="1169" height="285" key="GridCell.Tab.0.center/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1607088277213" />
     <state width="1877" height="503" key="GridCell.Tab.0.center/67.0.1213.720@67.0.1213.720" timestamp="1607026056627" />
     <state width="1154" height="418" key="GridCell.Tab.0.center/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
-    <state width="1877" height="431" key="GridCell.Tab.0.left" timestamp="1608823271349">
+    <state width="1877" height="442" key="GridCell.Tab.0.left" timestamp="1610643054725">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
+    <state width="1877" height="442" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1200@1920.0.1920.1200" timestamp="1610643054725" />
     <state width="1175" height="446" key="GridCell.Tab.0.left/62.0.1218.720/-1920.-413.1920.1200@62.0.1218.720" timestamp="1608622162002" />
     <state width="1877" height="422" key="GridCell.Tab.0.left/62.0.1218.720/1920.-307.1920.1200@1920.-307.1920.1200" timestamp="1608652688898" />
-    <state width="1877" height="431" key="GridCell.Tab.0.left/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1608823271349" />
+    <state width="1877" height="442" key="GridCell.Tab.0.left/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1609354771773" />
     <state width="1175" height="422" key="GridCell.Tab.0.left/62.0.1218.720/1920.0.1920.1200@62.0.1218.720" timestamp="1608731655831" />
     <state width="1877" height="379" key="GridCell.Tab.0.left/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1607343970328" />
     <state width="1173" height="168" key="GridCell.Tab.0.left/63.0.1217.720/1920.0.1920.1200@63.0.1217.720" timestamp="1605174818425" />
@@ -629,12 +627,13 @@
     <state width="1169" height="285" key="GridCell.Tab.0.left/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1607088277213" />
     <state width="1877" height="503" key="GridCell.Tab.0.left/67.0.1213.720@67.0.1213.720" timestamp="1607026056627" />
     <state width="1154" height="418" key="GridCell.Tab.0.left/67.0.1853.1200@67.0.1853.1200" timestamp="1604606281250" />
-    <state width="1877" height="431" key="GridCell.Tab.0.right" timestamp="1608823271349">
+    <state width="1877" height="442" key="GridCell.Tab.0.right" timestamp="1610643054725">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
+    <state width="1877" height="442" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1200@1920.0.1920.1200" timestamp="1610643054725" />
     <state width="1175" height="446" key="GridCell.Tab.0.right/62.0.1218.720/-1920.-413.1920.1200@62.0.1218.720" timestamp="1608622162002" />
     <state width="1877" height="422" key="GridCell.Tab.0.right/62.0.1218.720/1920.-307.1920.1200@1920.-307.1920.1200" timestamp="1608652688898" />
-    <state width="1877" height="431" key="GridCell.Tab.0.right/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1608823271349" />
+    <state width="1877" height="442" key="GridCell.Tab.0.right/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1609354771773" />
     <state width="1175" height="422" key="GridCell.Tab.0.right/62.0.1218.720/1920.0.1920.1200@62.0.1218.720" timestamp="1608731655831" />
     <state width="1877" height="379" key="GridCell.Tab.0.right/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1607343970328" />
     <state width="1173" height="168" key="GridCell.Tab.0.right/63.0.1217.720/1920.0.1920.1200@63.0.1217.720" timestamp="1605174818425" />
@@ -688,24 +687,26 @@
     </state>
     <state x="2137" y="28" key="Maven.ArtifactSearchDialog/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605098742034" />
     <state x="204" y="17" key="Maven.ArtifactSearchDialog/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604491692110" />
-    <state x="2091" y="-300" key="SettingsEditor" timestamp="1608624469034">
-      <screen x="1920" y="-307" width="1920" height="1200" />
+    <state x="2129" y="236" key="SettingsEditor" timestamp="1609339748400">
+      <screen x="1920" y="0" width="1920" height="1200" />
     </state>
     <state x="2091" y="-300" key="SettingsEditor/62.0.1218.720/1920.-307.1920.1200@1920.-307.1920.1200" timestamp="1608624469034" />
+    <state x="2129" y="236" key="SettingsEditor/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1609339748400" />
     <state x="2091" y="7" key="SettingsEditor/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1605087592770" />
     <state x="175" y="4" key="SettingsEditor/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604489190007" />
-    <state x="2472" y="277" key="Vcs.Push.Dialog.v2" timestamp="1608735495304">
+    <state x="2428" y="320" key="Vcs.Push.Dialog.v2" timestamp="1609347300052">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
     <state x="2472" y="-30" key="Vcs.Push.Dialog.v2/62.0.1218.720/1920.-307.1920.1200@1920.-307.1920.1200" timestamp="1608646599911" />
-    <state x="2472" y="277" key="Vcs.Push.Dialog.v2/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1608735495304" />
+    <state x="2428" y="320" key="Vcs.Push.Dialog.v2/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1609347300052" />
     <state x="412" y="166" key="Vcs.Push.Dialog.v2/62.0.1218.720/1920.0.1920.1200@62.0.1218.720" timestamp="1607619893432" />
     <state x="2472" y="322" key="Vcs.Push.Dialog.v2/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606734670702" />
     <state x="2472" y="277" key="Vcs.Push.Dialog.v2/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1607331638535" />
     <state x="416" y="166" key="Vcs.Push.Dialog.v2/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1606812743198" />
-    <state x="2894" y="444" key="com.intellij.ide.util.TipDialog" timestamp="1609337467105">
+    <state x="2894" y="444" key="com.intellij.ide.util.TipDialog" timestamp="1610613419017">
       <screen x="1920" y="0" width="1920" height="1200" />
     </state>
+    <state x="2894" y="444" key="com.intellij.ide.util.TipDialog/0.0.1280.680/1920.0.1920.1200@1920.0.1920.1200" timestamp="1610613419017" />
     <state x="2894" y="444" key="com.intellij.ide.util.TipDialog/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1609337467105" />
     <state x="673" y="266" key="com.intellij.ide.util.TipDialog/62.0.1218.720/1920.0.1920.1200@62.0.1218.720" timestamp="1608543181311" />
     <state x="2894" y="444" key="com.intellij.ide.util.TipDialog/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1607345897039" />
@@ -740,9 +741,10 @@
     <state x="2536" y="280" key="run.anything.popup/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606385466284" />
     <state x="2536" y="280" key="run.anything.popup/67.0.1213.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1604669306947" />
     <state x="456" y="168" key="run.anything.popup/67.0.1213.720/1920.0.1920.1200@67.0.1213.720" timestamp="1604997039785" />
-    <state x="2543" y="-42" width="672" height="678" key="search.everywhere.popup" timestamp="1608644143318">
-      <screen x="1920" y="-307" width="1920" height="1200" />
+    <state x="2543" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1610626169293">
+      <screen x="1920" y="0" width="1920" height="1200" />
     </state>
+    <state x="2543" y="265" width="672" height="678" key="search.everywhere.popup/0.0.1280.680/1920.0.1920.1200@1920.0.1920.1200" timestamp="1610626169293" />
     <state x="2543" y="-42" width="672" height="678" key="search.everywhere.popup/62.0.1218.720/1920.-307.1920.1200@1920.-307.1920.1200" timestamp="1608644143318" />
     <state x="2543" y="265" width="672" height="678" key="search.everywhere.popup/62.0.1218.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1608107919758" />
     <state x="2543" y="265" width="672" height="678" key="search.everywhere.popup/63.0.1217.720/1920.0.1920.1200@1920.0.1920.1200" timestamp="1606384746361" />

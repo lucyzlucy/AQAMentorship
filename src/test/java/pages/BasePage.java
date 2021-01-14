@@ -5,12 +5,13 @@ import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.LoadableComponent;
 
 import static driver.DriverWrapper.getCurrentUrl;
 import static driver.DriverWrapper.isElementLoaded;
 
 @Log4j2
-public class BasePage {
+public class BasePage extends LoadableComponent<BasePage> {
     @FindBy(className = "login")
     protected WebElement signinNavigationButton;
 
@@ -31,11 +32,24 @@ public class BasePage {
 
     public BasePage() {
         DriverWrapper.initElements(this);
+    }
+
+    @Override
+    protected void load() {
+        DriverWrapper.refresh();
+        log.info("Trying to load page "+ this.getClass().getSimpleName());
+    }
+
+    @Override
+    protected void isLoaded() throws Error {
+        waitForPageToLoad(signinNavigationButton);
         log.info(this.getClass().getSimpleName() + " is opened");
     }
 
     protected void waitForPageToLoad(WebElement keyElement) {
-        isElementLoaded(keyElement);
+        if (!isElementLoaded(keyElement)) {
+            throw new Error("Page " + this.getClass().getSimpleName() + " is not loaded");
+        }
     }
 
     public String getUrl() {
@@ -48,7 +62,7 @@ public class BasePage {
 
         log.info("Clicked on signinNavigationButton");
 
-        return new SignInPage();
+        return (SignInPage) new SignInPage().get();
     }
 
     @Step

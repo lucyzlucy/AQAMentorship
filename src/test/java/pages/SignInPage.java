@@ -1,6 +1,7 @@
 package pages;
 
 import business_objects.entities.User;
+import driver.DriverWrapper;
 import environment.Environment;
 import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
@@ -17,7 +18,7 @@ public class SignInPage extends BasePage {
     @FindBy(id = "passwd")
     private WebElement passInput;
 
-    @FindBy(id = "SubmitLogin")
+    @FindBy(id = "SubmitLoging")
     private WebElement submitSignInButton;
 
     @FindBy(id = "email_create")
@@ -27,6 +28,10 @@ public class SignInPage extends BasePage {
     private WebElement submitCreateButton;
 
     public SignInPage() {
+    }
+
+    @Override
+    protected void isLoaded() throws Error {
         waitForPageToLoad(submitSignInButton);
     }
 

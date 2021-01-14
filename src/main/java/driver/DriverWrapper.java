@@ -18,7 +18,7 @@ import java.time.Duration;
 @Log4j2
 public class DriverWrapper {
     protected static final int WAIT_ELEMENT_TIMEOUT = Integer.parseInt(Environment.getEnvProperty("driver.timeout"));
-    ;
+
     private static WebDriver driver = DriverFactory.getFiringDriver();
 
     public static void initDriver() {

@@ -1,5 +1,6 @@
 package pages;
 
+import driver.DriverWrapper;
 import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
@@ -21,9 +22,11 @@ public class CataloguePage extends BasePage {
     protected List<WebElement> productList;
 
 
-    public CataloguePage() {
+    @Override
+    protected void isLoaded() throws Error {
         waitForPageToLoad(catalogueMenu);
     }
+
 
     @Step
     public CataloguePage clickOnRandomCatalogueSection() {
